@@ -3,19 +3,52 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TipsNote : GitHub Pages Sample</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marx/2.0.4/marx.css">
+    <title>Seigo2016's-Portfolio</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/static/js/jquery-3-4-1.min.js"></script>
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
     <main>
-        <h1>GitHub Pages のサンプルです</h1>
+        <h1>Seigo2016's-Portfolio</h1>
         <a href="https://seigo2016-lab.mydns.jp"><button>LabTop に戻る</button></a>
+        <!-- <div class="container-fluid"> -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <!-- インジケータの設定 -->
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="/static/images/img1.jpg" alt="写真1">
+                    <div class="carousel-caption">
+                        <h1>写真1</h1>
+                        <p>test</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/images/img2.jpg" alt="写真2">
+                    <div class="carousel-caption">
+                        <h1>写真2</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/images/img3.jpg" alt="写真3">
+                    <div class="carousel-caption">
+                        <h1>写真3</h1>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            </a>
+        </div>
+        <!-- </div> -->
     </main>
-
-    <script>
-        console.log('GitHub Pages Sample');
-    </script>
 </body>
 
 </html>
