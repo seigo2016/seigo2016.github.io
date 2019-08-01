@@ -5,55 +5,214 @@
     <meta charset="UTF-8">
     <title>Seigo2016's-Portfolio</title>
     <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./static/css/main.css" rel="stylesheet">
     <script src="./static/js/jquery-3-4-1.min.js"></script>
     <script src="./static/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <main>
-        <!-- <h1>Seigo2016's-Portfolio</h1> -->
-        <!-- <a href="https://seigo2016-lab.mydns.jp"><button>LabTop に戻る</button></a> -->
-        <!-- <div class="container-fluid"> -->
-
-        <!-- </div> -->
-    </main>
-    <div class="container-fluid">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="static/images/img1.jpg" width="300" height="200" alt="1">
-                    <div class="carousel-caption">
-                        ...
+    <div class="container m-0 col-12 p-0">
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-dark navbar-expand-sm bg-dark m-0">
+                <a href="index.html" class="navbar-brand mr-5 ml-2">SEIGO2016's Portfolio</a>
+                <a href="https://twitter.com/seigo2018" class="navbar-brand ml-3">Twitter</a>
+                <a href="https://seigo2016-lab.mydns.jp" class="navbar-brand">Web</a>
+            </nav>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="height: 100%">
+                        <img class="bd-placeholder-img" style="width: 100%; height: 40vh; object-fit: cover; z-index: 1"
+                            src="static/images/img1.jpg">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Achievement</h1>
+                                <p></p>
+                                <p><a class="btn btn-lg bg-btitle text-white" href="#Achievement" role="button">Go to
+                                        Achievement</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="bd-placeholder-img" style="width: 100%; height: 40vh; object-fit: cover; z-index: 1"
+                            src="static/images/img2.jpg">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Activity</h1>
+                                <p></p>
+                                <p><a class="btn btn-lg bg-btitle text-white" href="#Activity" role="button">Go to
+                                        Activity</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="bd-placeholder-img" style="width: 100%; height: 40vh; object-fit: cover; z-index: 1"
+                            src="static/images/img3.jpg">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>seigo2016's Profile</h1>
+                                <p></p>
+                                <p><a class="btn btn-lg bg-btitle text-white" href="#Profile" role="button">Go to
+                                        Profile</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <img src="static/images/img2.jpg" width="300" height="200" alt="2">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-                </div>
-                ...
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-    </div>
+        <div class="ml-0">
+            <!-- プロフィール -->
+            <div class="card-header h4 bg-btitle text-white ml-0">seigo2016's Profile</div>
+            <div class="card-body lead">
+                <a name="Profile"></a>
+                <div class="card card-default">
+                    <!-- 要約 -->
+                    <div class="card-header h5 bg-title">SUMMARY</div>
+                    <div class="card-body  lead">
+                        <p>I'm seigo2016. I learn programming to create useful apps.</p>
+                        <p> I usually use Python of programming
+                            language,and I like using Raspberry Pi.</p>
+                    </div>
+                    <!--個人情報 -->
+                    <div class="card-header h5 bg-title">PERSONAL INFORMATION</div>
+                    <div class="card-body  lead">
+                        <p>Date of Birth … 200X/05/11</p>
+                    </div>
+                    <!-- 資格 -->
+                    <div class="card-header h5 bg-title">CERTIFICATION</div>
+                    <div class="card-body  lead">
+                        <table class="table small ml-4">
+                            <thead>
+                                <tr>
+                                    <th>資格名(日本語)</th>
+                                    <th>CERTIFICATION(English)</th>
+                                    <th>備考</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>情報検定</p>
+                                        <p>情報活用試験1級</p>
+                                    </td>
+                                    <td>Information Technology Certification<br>Series　Applied Information Technology
+                                        Certification
+                                        Level3</td>
+                                    <td></td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>情報検定 情報システム試験</p>
+                                        <p>基本スキル・プログラミングスキル</p>
+                                    </td>
+                                    <td>
+                                        <p>Information Technology Certification Series</p>
+                                        <p>Information System
+                                            Certification　Basic
+                                            Skills・Programming</p>
+                                    </td>
+                                    <td>
+                                        <p>プログラマ認定</p>Programmer Certification accreditation available for candidates
+                                        who
+                                        have
+                                        successfully
+                                        completed the Information System Certification examination.<p></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ITパスポート試験</td>
+                                    <td>Information Technology Passport Examination</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>実用英語技能検定3級</td>
+                                    <td>The EIKEN Test in Practical English Proficiency Grade 3</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>日本漢字能力検定2級合格</td>
+                                    <td>The Japan Kanji Aptitude Test Grade 2</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 能力 -->
+                    <div class="card-header h5 bg-title">SKILLS
+                    </div>
+                    <div class="card-body  lead">
+                        <p>Favorite … Python</p>
+                        <p>Other … C, Unity, JavaScript, PHP, HTML/CSS, micro:bit, Arduino, Raspberry Pi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a name="Activity"></a>
+        <div class="card-header h4 bg-btitle text-white ml-0">seigo2016's Activity</div>
+
+
+        <div class="card-header h4 bg-btitle text-white ml-0">seigo2016's Product</div>
+        <div class="card-body lead">
+            <a name="Achievement"></a>
+            <div class="card card-default">
+
+                <div class="card-header h5 bg-title">Itokake-Mandara-Color-Simurator (糸かけ曼荼羅色シミュレーター)</div>
+                <div class="card-body  lead">
+                    <p>This software simulate color and shape of Itokake-mandara.</p>
+                    <p></p>
+                </div>
+                <div class="card-header h5 bg-title">Reagent search System(試薬検索システム)</div>
+                <div class="card-body  lead">
+                </div>
+                <div class="card-header h5 bg-title">Smart lock(スマートロック)</div>
+                <div class="card-body  lead">
+                    <p>I made Smart Lock with Raspberry Pi zero WH.
+                        It can open and close the door from web browser.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BHFAZTuZBGE" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="card-header h5 bg-title">Operate with color recognition Robot (色認識で操作するロボット)</div>
+                <div class="card-body  lead">
+                </div>
+                <div class="card-header h5 bg-title">Sphere robot (球体ロボット)</div>
+                <div class="card-body  lead">
+                    <p>This robot is Sphere robot made from Raspberry Pi zero WH.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0-eGsrVSpKM" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9oHtzbt6FJ4" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="card-header h5 bg-title">Remote Control Car Spraying Insecticide (殺虫剤遠隔噴霧車)</div>
+                <div class="card-body  lead">
+                    <p>This robot is remote control car to pest control. It's using micro:bit.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Zq57kEpYekE" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="card-header h5 bg-title">Radio control of the model tank (戦車プラモデルのラジコン化)</div>
+                <div class="card-body  lead">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zETG8R2qTDw" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
 </body>
 
 </html>

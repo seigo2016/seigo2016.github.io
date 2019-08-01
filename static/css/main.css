@@ -1,0 +1,16 @@
+img {
+    width: 100%;
+    height: 92vh;
+    object-fit: cover;
+    z-index: 1;
+}
+title{
+    width: 100%;
+    height: 8vh;
+}
+.bg-btitle{
+    background-color: #247BA0;
+}
+.bg-title{
+    background-color:#70C1B3;
+}
