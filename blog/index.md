@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: Slate
 title: TopPage
 ---
 
