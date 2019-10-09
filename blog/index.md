@@ -1,4 +1,4 @@
 ---
-layout: Slate
+layout: default
 title: TopPage
 ---
