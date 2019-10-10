@@ -23,7 +23,7 @@ email: 2003seigo@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   seigo2016-blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://seigo2016.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: seigo2016
 github_username:  seigo2018
 
