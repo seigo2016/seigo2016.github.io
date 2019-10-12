@@ -4,7 +4,10 @@ title: "戦車プラモデルのラジコン化"
 date: 2019-10-10 10:00:00 +0900
 categories: Programming
 ---
+
 ## はじめに
+*書きかけの項目です*
+
 今回はタミヤの1/35スケールのプラモデルをXbox Controllerから(Bluetoothで)操作したいと思います。
 3年ほど前にArduinoとAndroidスマホで製作したことはあったのですが,Bluetooth接続に手間取った思い出があります。
 そこで通信機能もデフォルトで備えたRaspberry Pi Zeroで製作しようと思った次第です。
