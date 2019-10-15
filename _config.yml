@@ -28,7 +28,7 @@ twitter_username: seigo2016
 github_username:  seigo2018
 
 # Build settings
-theme: minima
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
   - jekyll-sitemap
