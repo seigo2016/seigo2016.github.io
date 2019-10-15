@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "糸かけ曼荼羅色シミュレーター"
 date: 2019-10-10 10:00:00 +0900
 categories: Programming
