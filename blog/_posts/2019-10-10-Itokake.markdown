@@ -4,7 +4,7 @@ title: "糸かけ曼荼羅色シミュレーター"
 date: 2019-10-10 10:00:00 +0900
 categories: Programming
 ---
-
+<script data-ad-client="ca-pub-6083391768192122" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 # 糸かけ曼荼羅色シミュレーターの制作
 ## 糸かけ曼荼羅色シミュレーターについて
 *書きかけの項目です*
