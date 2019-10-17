@@ -1,5 +1,6 @@
 title: seigo2016's blog
 author: seigo2016
+
 email: 2003seigo@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
   Write an awesome description for your new site here. You can edit this
@@ -15,8 +16,8 @@ minima:
 
   # generate social links in footer
   social_links:
-    twitter: jekyllrb
-    github:  jekyll
+    twitter: seigo2018
+    github:  seigo2016
     rss: rss
     # dribbble: jekyll
     # facebook: jekyll
