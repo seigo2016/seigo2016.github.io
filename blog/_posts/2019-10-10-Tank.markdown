@@ -68,10 +68,11 @@ SG90を使用しました。主砲旋回用と走行用です。
 ### 3. LED
 後部と前部のライトはいい感じに穴をあけてLEDを(気持ち)埋め込みます。
 前部は開け閉めする際にケーブルが引っかかるのと困るのでジャンパーのオスメスをつかって外れるようにしておきます。
-<img src="/blog/image/IMG_2599.JPG" alt="前部LED裏" title="前部LED裏">
-<img src="/blog/image/IMG_2600.JPG" alt="前部LED表" title="前部LED表">
-<img src="/blog/image/IMG_2601.JPG" alt="後部LED裏" title="後部LED裏">
-<img src="/blog/image/IMG_2602.JPG" alt="後部LED表" title="後部LED表">
+<img src="/blog/image/IMG_2599.JPG" alt="前部LED裏" title="前部LED裏" width="50%" height="50%">
+<img src="/blog/image/IMG_2600.JPG" alt="前部LED表" title="前部LED表" width="50%" height="50%">
+<img src="/blog/image/IMG_2601.JPG" alt="後部LED裏" title="後部LED裏" width="50%" height="50%">
+<img src="/blog/image/IMG_2602.JPG" alt="後部LED表" title="後部LED表" width="50%" height="50%">
+
 ### 4. バッテリーボックス
 18650電池を使用しているのでその18650の電池ボックスを出来る限り前側につめます。余り前に詰めると閉められなくなるので注意です。
 
