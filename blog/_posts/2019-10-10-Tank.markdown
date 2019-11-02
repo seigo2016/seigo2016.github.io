@@ -35,11 +35,11 @@ Arduinoの時はT-34でした。
 
 ### リチウムイオン電池 18650 とバッテリーケース
 
-5V電源とサーボモータを動作させるためにモバイルバッテリーを使おうと考えたのですが，入る大きさのものがなかったので中身と同じものを使います。
+5V電源とサーボモータを動作させるためにモバイルバッテリーを使おうと考えたのですが，入る大きさのものがなかったので中身の18650電池を使います。
 
 ### 5V昇圧モジュール
 
-2Aほど供給できれば問題ないでしょう。私はXL6009を使用しました。
+ラズパイとサーボモータx3なので合わせて2Aほど供給できればきっと問題ないでしょう。私はXL6009を使用しました。
 
 
 ### サーボモーター
@@ -68,12 +68,12 @@ SG90を使用しました。主砲旋回用と走行用です。
 ### 3. LED
 後部と前部のライトはいい感じに穴をあけてLEDを(気持ち)埋め込みます。
 前部は開け閉めする際にケーブルが引っかかるのと困るのでジャンパーのオスメスをつかって外れるようにしておきます。
-<img src="/blog/image/IMG_2599.JPG" alt="前部LED裏" title="前部LED裏" width="50%" height="50%">
-<img src="/blog/image/IMG_2600.JPG" alt="前部LED表" title="前部LED表" width="50%" height="50%">
-<img src="/blog/image/IMG_2601.JPG" alt="後部LED裏" title="後部LED裏" width="50%" height="50%">
-<img src="/blog/image/IMG_2602.JPG" alt="後部LED表" title="後部LED表" width="50%" height="50%">
+<img src="/blog/image/IMG_2599.JPG" alt="前部LED裏" title="前部LED裏" width="40%" height="40%">
+<img src="/blog/image/IMG_2600.JPG" alt="前部LED表" title="前部LED表" width="40%" height="40%">
+<img src="/blog/image/IMG_2601.JPG" alt="後部LED裏" title="後部LED裏" width="40%" height="40%">
+<img src="/blog/image/IMG_2602.JPG" alt="後部LED表" title="後部LED表" width="40%" height="40%">
 
-### 4. バッテリーボックス
+### 4. バッテリーボックス・昇圧部モジュール部分
 18650電池を使用しているのでその18650の電池ボックスを出来る限り前側につめます。余り前に詰めると閉められなくなるので注意です。
 
 ### 5. 砲塔部分
@@ -87,6 +87,7 @@ SG90を使用しました。主砲旋回用と走行用です。
 ### 8. プログラム
 
 ## 完成
+<img src="/blog/image/IMG_2598.JPG" alt="下部全体図" title="下部全体図">
 動作映像がこちらになります。<br>
 サーボモーターの中央値がうまく取れなかったので絶えず少し動いてます。
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zETG8R2qTDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -97,6 +98,7 @@ SG90を使用しました。主砲旋回用と走行用です。
 
 あと砲塔回転部分はもっとスマートにしないとスペースがやばいですね。
 
-そもそもスペースを気にするなら，5V必要なラズベリーパイよりarduinoが良いと思います。
+そもそもスペースだけを気にするなら，5V必要なラズベリーパイよりarduinoが良いと思います。
 
-私がはじめに戦車プラモデルのラジコン化をしたときはarduinoを使いました。
+ちなみに私がはじめに戦車プラモデルのラジコン化をしたときはarduinoを使いました。
+
