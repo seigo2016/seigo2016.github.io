@@ -5,7 +5,7 @@
         color: #dddddd;
     }
     .header{
-        background-image: url('..//images/bg-min.jpg');
+        background-image: url('../images/bg-min.jpg');
         height: 150px;
     }
     .cert{
@@ -14,4 +14,4 @@
         margin-left: auto;
         margin-top: 10px;
         margin-bottom: 10px;
-    } 
+    }
