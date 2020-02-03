@@ -4,13 +4,13 @@
     line-height: 150px;
     color: #dddddd;
 }
-.header{
+.top-header{
     background-image: url('../images/bg-min.jpg');
     height: 150px;
 }
 .cert{
-    width: 80%;
-    margin-right: 10%;
+    width: 90%;
+    margin-right: 5%;
     margin-left: auto;
     margin-top: 10px;
     margin-bottom: 10px;

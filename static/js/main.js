@@ -1,4 +1,5 @@
 function OnButtonClick(x) {
+    $('.lazy').lazyload();
     $('.ui.modal.'+x).modal('show');
 }
 $('.ui.embed').embed();
