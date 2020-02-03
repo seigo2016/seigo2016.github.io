@@ -1,44 +1,17 @@
-img {
-    width: 100%;
-    height: 92vh;
-    object-fit: cover;
-    z-index: 1;
-}
-title{
-    width: 100%;
-    height: 8vh;
-}
-.bg-btitle{
-    background-color: #247BA0;
-}
-.bg-title{
-    background-color:#70C1B3;
-}
-.youtube {
-	display: inline-block;
-	position: relative;
-	overflow: hidden;
-	width: 320px;
-	height: 180px;
-}
-.youtube::before {
-	position: absolute;
-	content: "Play";
-	color: #fff;
-	text-align: center;
-	font-size: 30px;
-    font-weight: bold;
-	line-height: 180px;
-	background: rgba(0, 0, 0, 0.7);
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 10;
-	transition: all 0.3s;
-}
-.youtube:hover::before {
-	background: rgba(0, 0, 0, 0.8);
-	cursor: pointer;
-	transition: all 0.3s;
-}
+    .title-name{
+        font-size: 45pt;
+        text-align: center;
+        line-height: 150px;
+        color: #dddddd;
+    }
+    .header{
+        background-image: url('..//images/bg.jpg');
+        height: 150px;
+    }
+    .cert{
+        width: 80%;
+        margin-right: 10%;
+        margin-left: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    } 
