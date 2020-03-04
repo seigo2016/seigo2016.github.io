@@ -1,43 +1,198 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css">
-    <title>seigo2016's Portfolio</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="main.js"></script>
+    <meta charset="UTF-8">
+    <title>Seigo2016's-Portfolio</title>
+    <link async href="semantic/dist/semantic.min.css" rel="stylesheet">
+    <link async href="static/css/main.css" rel="stylesheet">
+    <link async href="semantic/dist/components/transition.css" rel="stylesheet">
+    <script src="static/js/jquery-3-4-1.min.js"></script>
+    <script src="static/js/jquery.lazyload.js"></script>
+    <!-- <script data-ad-client="ca-pub-6083391768192122" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 </head>
 
 <body>
-    <header>
-
-    </header>
-    <main>
-        <div class="Folder">
-            <img class="FolderIcon" src="folder.png" ondblclick="openFolder('自己紹介');">
-            <p class="FolderTitle">自己紹介</p>
+    <headr>
+        <div class="ui secondary  menu">
+            <a class="item active header-text">Home</a>
+            <a class="item header-text" href="https://github.com/seigo2016/" target="_blank">Github</a>
+            <a class="item header-text" href="https://twitter.com/seigo2018" target="_blank">Twitter</a>
         </div>
-        <div id="overlay" class="close">
-            <div class="flex">
-                <div class="overlay-inner">
-                    <button id="close-btn" class="close" type=button onclick="closeFolder()">×</button>
+    </headr>
+    <div class="top-header">
+        <div class="title-name">seigo2016  Portfolio</div>
+    </div>
+    <div class="content">
+    <div class="ui four column grid stackable centered">
+        <div class="column">
+            <div class="ui horizontal segment">
+                <button class="ui fluid button" onclick="OnButtonClick('itokake');"><img class="ui image large centered" src="static/images/Itokake1-min.png" alt="詳細" />糸かけ曼荼羅色シミュレーター</button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui horizontal segment">
+                <button class="ui fluid button" onclick="OnButtonClick('pss');"><img class="ui image large centered" src="static/images/pss-min.png" alt="詳細" />Presentation Support System</button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui horizontal segment">
+                <button class="ui fluid button" onclick="OnButtonClick('sphere-robot');"><img class="ui image large centered" src="static/images/sphere-min.png" alt="詳細" />球体ロボット</button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui horizontal segment">
+                <button class="ui fluid button" onclick="OnButtonClick('radio-control-tank');"><img class="ui image large centered" src="static/images/tank-min.png" alt="詳細" />戦車プラモデルのラジコン化</button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui horizontal segment">
+                <button class="ui fluid button" onclick="OnButtonClick('spray');"><img class="ui image large centered" src="static/images/spray.png" alt="詳細" />殺虫剤遠隔噴霧車</button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui horizontal segment">
+                <button class="ui fluid button" onclick="OnButtonClick('digital-signage');"><img class="ui image large centered" src="static/images/Digital-Signage2-min.png" alt="詳細" />デジタルサイネージ with Raspberry Pi</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="ui modal itokake">
+        <i class="close icon"></i>
+        <div class="header">糸かけ曼荼羅色シミュレーター</div>
+        <div class="content">
+            <div class="description">
+                <p class="ui huge header">U22プログラミングコンテスト2019 日本事務器賞受賞</p>
+                <p>糸かけ曼荼羅の制作を支援するソフトウェアです。配色や形状のシミュレーションができます</p>
+                <p><a href="https://itokake.herokuapp.com/">ソフトウェアリンク</a></p>
+                <p><a href="https://u22procon.com/report/comment.html#_085">U22リンク</a></p>
+                <div class="ui three column stackable grid container">
+                    <div class="column">
+                        <img class="ui image small centered lazy" data-original="static/images/Itokake1-min.png" alt="詳細" />
+                    </div>
+                    <div class="column">
+                        <img class="ui image small centered lazy" data-original="static/images/Itokake2-min.png" alt="詳細" />
+                    </div>
+                    <div class="column">
+                        <img class="ui image small centered lazy" data-original="static/images/Itokake3-min.png" alt="詳細" />
+                    </div>
+                    <div class="column">
+                        <img class="ui image small centered lazy" data-original="static/images/Itokake4-min.png" alt="詳細" />
+                    </div>
+                    <div class="column">
+                        <img class="ui image small centered lazy" data-original="static/images/Itokake5-min.png" alt="詳細" />
+                    </div>
+                    <div class="column">
+                        <img class="ui image small centered lazy" data-original="static/images/Itokake6-min.png" alt="詳細" />
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
-    <footer>
-        <div class="FooterTitle">seigo2016's Portfolio</div>
-        <div id="time" class="FooterTime"></div>
-        <script>
-            time();
-            function time() {
-                var now = new Date();
-                document.getElementById("time").innerHTML = now.toLocaleString();
-            }
-            setInterval('time()', 1000);
-        </script>
-    </footer>
+    </div>
+    <div class="ui modal pss">
+        <i class="close icon"></i>
+        <div class="header">Presentation Support System</div>
+        <div class="content">
+            <div class="description">
+                <p>プレゼンテーションを更に面白く，便利に行うためのツール。現在スライド上にリアルタイムでコメントを流すシステムを実装。</p>
+                <p><a href="https://pss.seigo2016.com">システム詳細</a></p>
+                <p><a href="https://github.com/seigo2016/PSS">クライアントアプリ ソースコード</a></p>
+                <p><a href="https://github.com/seigo2016/PSS-Server">サーバー ソースコード</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="ui modal digital-signage">
+        <i class="close icon"></i>
+        <div class="header">Digital Signage with RaspberryPi</div>
+        <div class="content">
+            <div class="description">
+                <p class="ui huge header">みんなのラズパイコンテスト RaspberryPi財団賞受賞</p>
+                <p>Raspberry PiとDropboxを使用して，掲示板をデジタル化したデジタルサイネージ。</p>
+                <div class="column">
+                    <img class="ui image large centered lazy" data-original="static/images/Digital-Signage-min.png" alt="詳細" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui modal spray">
+        <i class="close icon"></i>
+        <div class="header">殺虫剤遠隔噴霧車</div>
+        <div class="content">
+            <div class="description">
+                <p class="ui huge header">たのしいmicro:bitコンテスト 特別賞受賞</p>
+                <p>遠隔操作で殺虫剤を噴霧するロボット(?)</p>
+                <iframe width="720" height="480" src="https://www.youtube.com/embed/Zq57kEpYekE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="ui modal sphere-robot">
+        <i class="close icon"></i>
+        <div class="header">球体ロボット</div>
+        <div class="content">
+            <div class="description">
+                <p>プラスチック球の中にRaspberryPi zero WHを搭載し，市販品のSpheroのような球体ロボットを制作した。</p>
+                <p>Xboxコントローラーで操作可能。</p>
+                <div class="movie"></div>
+                    <iframe class="youtube" width="720" height="480" data-src="https://www.youtube.com/embed/0-eGsrVSpKM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube" width="720" height="480" data-src="https://www.youtube.com/embed/9oHtzbt6FJ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui modal radio-control-tank">
+        <i class="close icon"></i>
+        <div class="header">戦車プラモデルのラジコン化</div>
+        <div class="content">
+            <div class="description">
+                <p>タミヤの1/35戦車プラモデル(M1A1)にRaspberryPi zero WHを搭載。</p>
+                <p>Xboxコントローラーでラジコンと同じように操作できるようにした。</p>
+                <p>サーボモーターで砲塔の旋回も可能。</p>
+                <iframe class="youtube" width="720" height="480" data-src="https://www.youtube.com/embed/zETG8R2qTDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="ui stackable profile column cert  right aligned">
+        <p class="ui large header">取得資格</p>
+        <table class="ui definition table">
+            <tbody>
+                <tr>
+                    <td>情報検定 情報活用試験1級</td>
+                </tr>
+                <tr>
+                    <td>情報検定情報システム試験 基本スキル・プログラミングスキル プログラマ認定</td>
+                </tr>
+                <tr>
+                    <td>ITパスポート試験</td>
+                </tr>
+                <tr>
+                    <td>実用英語技能検定準2級</td>
+                </tr>
+                <tr>
+                    <td>日本漢字能力検定2級</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p></p>
+    <div class="ui stackable profile column cert  right aligned">
+        <p class="ui large header">受賞歴</p>
+        <table class="ui definition table">
+            <tbody>
+                <tr>
+                    <td>たのしいmicro:bitコンテスト2019 特別賞</td>
+                </tr>
+                <tr>
+                    <td>U22プログラミングコンテスト2019 入賞・日本事務器賞</td>
+                </tr>
+                <tr>
+                    <td>みんなのラズパイコンテスト RaspberryPi財団賞</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
-
+<script src="semantic/dist/components/transition.js"></script>
+<script src="semantic/dist/semantic.min.js"></script>
+<script src="semantic/dist/semantic.min.js"></script>
+<script async src="static/js/main.js"></script>
 </html>

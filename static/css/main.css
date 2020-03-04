@@ -1,0 +1,28 @@
+.title-name{
+    font-size: 45pt;
+    text-align: center;
+    line-height: 150px;
+    color: #eeeeee;
+}
+.top-header{
+    background-image: url('../images/bg-min.jpg');
+    height: 150px;
+}
+.cert{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.movie{
+    margin: auto;
+    text-align: center;
+}
+.content{
+    width: 90%;
+    margin: auto;
+}
+.header-text{
+    font-size: large;
+}
