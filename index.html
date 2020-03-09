@@ -24,7 +24,7 @@
         <div class="title-name">seigo2016  Portfolio</div>
     </div>
     <div class="content">
-    <div class="ui four column grid stackable centered">
+    <div class="ui four column grid stackable centered doubling">
         <div class="column">
             <div class="ui horizontal segment">
                 <button class="ui fluid button" onclick="OnButtonClick('itokake');"><img class="ui image large centered" src="static/images/Itokake1-min.png" alt="詳細" />糸かけ曼荼羅色シミュレーター</button>
@@ -57,11 +57,12 @@
         </div>
         <div class="column">
             <div class="ui horizontal segment">
-                <button class="ui fluid button" onclick="OnButtonClick('smartlock');"><img class="ui image large centered" src="static/images/smartlock.JPG" alt="詳細" />スマートロック with Raspberry Pi</button>
+                <button class="ui fluid button" onclick="OnButtonClick('smartlock');"><img class="ui image large centered" src="static/images/smartlock.JPG" alt="詳細"/>スマートロック with Raspberry Pi</button>
             </div>
         </div>
     </div>
     </div>
+    <!-- 糸かけ色シミュレーター -->
     <div class="ui modal itokake">
         <i class="close icon"></i>
         <div class="ui large header">糸かけ曼荼羅色シミュレーター</div>
@@ -73,27 +74,28 @@
                 <p><a href="https://u22procon.com/report/comment.html#_085">U22リンク</a></p>
                 <div class="ui three column stackable grid container">
                     <div class="column">
-                        <img class="ui image small centered lazy" data-original="static/images/Itokake1-min.png" alt="詳細" />
+                        <img class="ui image centered lazy" data-original="static/images/Itokake1-min.png" alt="詳細" />
                     </div>
                     <div class="column">
-                        <img class="ui image small centered lazy" data-original="static/images/Itokake2-min.png" alt="詳細" />
+                        <img class="ui image centered lazy" data-original="static/images/Itokake2-min.png" alt="詳細" />
                     </div>
                     <div class="column">
-                        <img class="ui image small centered lazy" data-original="static/images/Itokake3-min.png" alt="詳細" />
+                        <img class="ui image centered lazy" data-original="static/images/Itokake3-min.png" alt="詳細" />
                     </div>
                     <div class="column">
-                        <img class="ui image small centered lazy" data-original="static/images/Itokake4-min.png" alt="詳細" />
+                        <img class="ui image centered lazy" data-original="static/images/Itokake4-min.png" alt="詳細" />
                     </div>
                     <div class="column">
-                        <img class="ui image small centered lazy" data-original="static/images/Itokake5-min.png" alt="詳細" />
+                        <img class="ui image centered lazy" data-original="static/images/Itokake5-min.png" alt="詳細" />
                     </div>
                     <div class="column">
-                        <img class="ui image small centered lazy" data-original="static/images/Itokake6-min.png" alt="詳細" />
+                        <img class="ui image centered lazy" data-original="static/images/Itokake6-min.png" alt="詳細" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- スマートロック -->
     <div class="ui modal smartlock">
         <i class="close icon"></i>
         <div class="ui large header">スマートロック with Raspberry Pi</div>
@@ -101,18 +103,21 @@
             <div class="description">
                 <p>既存のドアの鍵の開け閉めをスマートフォンから操作できる「スマートロック」にするシステム</p>
                 <p><a href="https://qiita.com/seigo2016/items/15fb2bd4fb5322343fd0">システム詳細</a></p>
-                <div class="column">
-                    <img class="ui image small centered lazy" data-original="static/images/smartlock.JPG" alt="詳細" />
-                </div>
-                <div class="column">
-                    <img class="ui image small centered lazy" data-original="static/images/smartlock-APP.JPG" alt="詳細" />
-                </div>
-                <div class="column">
-                    <img class="ui image small centered lazy" data-original="static/images/smartlock-button.JPG" alt="詳細" />
+                <div class="ui three column grid stackable centered">
+                    <div class="column">
+                        <img class="ui image centered lazy" data-original="static/images/smartlock.JPG" alt="詳細" />
+                    </div>
+                    <div class="column">
+                        <img class="ui image centered lazy" data-original="static/images/smartlock-APP.PNG" alt="詳細" />
+                    </div>
+                    <div class="column">
+                        <img class="ui image centered lazy" data-original="static/images/smartlock-button.JPG" alt="詳細" />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- PSS -->
     <div class="ui modal pss">
         <i class="close icon"></i>
         <div class="ui large header">Presentation Support System</div>
@@ -127,6 +132,7 @@
             </div>
         </div>
     </div>
+    <!-- デジタルサイネージ -->
     <div class="ui modal digital-signage">
         <i class="close icon"></i>
         <div class="ui large header">Digital Signage with RaspberryPi</div>
@@ -141,6 +147,7 @@
             </div>
         </div>
     </div>
+    <!-- 殺虫剤遠隔噴霧車 -->
     <div class="ui modal spray">
         <i class="close icon"></i>
         <div class="ui large header">殺虫剤遠隔噴霧車</div>
@@ -152,6 +159,7 @@
             </div>
         </div>
     </div>
+    <!-- 球体ロボット -->
     <div class="ui modal sphere-robot">
         <i class="close icon"></i>
         <div class="ui large header">球体ロボット</div>
@@ -166,6 +174,7 @@
             </div>
         </div>
     </div>
+    <!-- ラジコン戦車 -->
     <div class="ui modal radio-control-tank">
         <i class="close icon"></i>
         <div class="ui large header">戦車プラモデルのラジコン化</div>
@@ -178,6 +187,11 @@
             </div>
         </div>
     </div>
+    <!-- スキル -->
+    <div class="ui">
+        <p class="ui large header">スキル</p>
+    </div>
+    <!-- 資格 -->
     <div class="ui stackable profile column cert  right aligned">
         <p class="ui large header">取得資格</p>
         <table class="ui definition table">
@@ -200,6 +214,7 @@
             </tbody>
         </table>
     </div>
+    <!-- 受賞歴 -->
     <p></p>
     <div class="ui stackable profile column cert  right aligned">
         <p class="ui large header">受賞歴</p>
@@ -219,7 +234,6 @@
     </div>
 </body>
 <script src="semantic/dist/components/transition.js"></script>
-<script src="semantic/dist/semantic.min.js"></script>
 <script src="semantic/dist/semantic.min.js"></script>
 <script async src="static/js/main.js"></script>
 </html>
