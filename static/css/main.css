@@ -26,6 +26,13 @@
 .header-text{
     font-size: large;
 }
+.segment{
+    /* width: 200px; */
+	height: 100%;
+}
+.fluid{
+    height: 100% ;
+}
 
 @media screen and (max-width: 499px) { 
 body{

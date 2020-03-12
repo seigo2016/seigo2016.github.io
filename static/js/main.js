@@ -20,6 +20,7 @@ function youtube_init() {
 
 window.onload = function() {
     youtube_init()
+    // document.getElementsByClassName('image').height ='200px';
 }
 
 
