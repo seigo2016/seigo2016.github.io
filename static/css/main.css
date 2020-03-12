@@ -34,7 +34,7 @@
     height: 100% ;
 }
 
-@media screen and (max-width: 499px) { 
+/* @media screen and (max-width: 499px) { 
 body{
     font-size: 18px;
 }
@@ -45,4 +45,4 @@ body{
 }
 }
 @media screen and (min-width:1000px) {
-}
+} */
