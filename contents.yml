@@ -1,0 +1,93 @@
+- title: 糸かけ曼荼羅色シミュレーター
+  define: itokake
+  tag: 
+    - python3
+    - html
+    - css
+  prize: U22プログラミングコンテスト2019 日本事務器賞受賞
+  description: 糸かけ曼荼羅の制作を支援するソフトウェア。配色や形状のシミュレーションが可能
+  link:
+    - ソフトウェアリンク: https://itokake.herokuapp.com/
+    - U22 リンク: https://u22procon.com/report/comment.html#_085
+  top_image: static/images/Itokake1-min.png
+  image:
+    - 詳細: static/images/Itokake1-min.png
+
+- title: スマートロック with Raspberry Pi
+  define: smartlock
+  tag: 
+    - python3
+    - Raspberry Pi
+  description: 既存のドアの鍵の開け閉めをスマートフォンから操作できる「スマートロック」にするシステム
+  link:
+    - システム詳細: https://qiita.com/seigo2016/items/15fb2bd4fb5322343fd0
+  top_image: static/images/smartlock.jpg
+  image:
+    - 詳細: static/images/smartlock.jpg
+    - 詳細2: static/images/smartlock-button.jpg
+    - 詳細3: static/images/smartlock-APP.PNG
+
+
+- title: 戦車プラモデルのラジコン化
+  define: radio-control-tank
+  tag: 
+    - python3
+    - Raspberry Pi
+  description: タミヤの1/35戦車プラモデル(M1A1)にRaspberryPi zero WHを搭載。 <br> Xboxコントローラーでラジコンと同じように操作できるようにした <br> サーボモーターで砲塔の旋回も可能。
+  link:
+    - システム詳細: https://qiita.com/seigo2016/items/15fb2bd4fb5322343fd0
+  top_image: static/images/tank-min.jpg
+  image:
+    - 詳細: static/images/tank-min.jpg
+
+- title: 球体ロボット
+  define: sphere-robot
+  tag: 
+    - python3
+    - Raspberry Pi
+  description: プラスチック球の中にRaspberryPi zero WHを搭載し，市販品のSpheroのような球体ロボットを制作した。 <br> Xboxコントローラーで操作可能。
+  link:
+    - Youtube: https://www.youtube.com/embed/0-eGsrVSpKM
+  top_image: static/images/sphere-min.png
+  image:
+    - 詳細: static/images/sphere-min.png
+
+- title: 殺虫剤遠隔噴霧車
+  define: spray
+  prize: たのしいmicro:bitコンテスト 特別賞受賞
+  tag: 
+    - micro:bit
+  description: 遠隔操作で殺虫剤を噴霧するロボット(?)
+  link:
+    - Youtube: https://www.youtube.com/embed/Zq57kEpYekE
+  top_image: static/images/spray.jpg
+  image:
+    - 詳細: static/images/spray.jpg
+
+- title: Digital Signage with RaspberryPi
+  define: digital-signage
+  prize: みんなのラズパイコンテスト RaspberryPi財団賞受賞
+  tag: 
+    - python3
+    - Raspberry Pi
+    - Google Drive API
+  description: Raspberry PiとDropboxを使用して，掲示板をデジタル化したデジタルサイネージ。
+  link:
+    - システム詳細: https://qiita.com/seigo2016/items/c69e2cdf5f56f235739f
+  top_image: static/images/Digital-Signage2-min.png
+  image:
+    - 詳細: static/images/Digital-Signage-min.png
+
+- title: Presentation Support System
+  define: pss
+  prize: N予備校 Webアプリコンテスト 2019冬 N高健闘賞受賞
+  tag: 
+    - python3
+    - HTML
+    - CSS
+    - Electron
+  description: プレゼンテーションを更に面白く，便利に行うためのツール。<br> 現在スライド上にリアルタイムでコメントを流すシステムを実装。
+  link:
+    - システム詳細: https://qiita.com/seigo2016/items/d3f44ad19b1c1b54e4f3
+    - サーバーシステム: https://pss.seigo2016.com
+  top_image: static/images/pss-min.png
