@@ -1,6 +1,11 @@
 import yaml
+import os
 
-with open('contents.yml') as f:
+current_dir = os.path.dirname(os.path.abspath(__file__))
+template_dir = current_dir + 'template'
+
+
+with open(template_dir + '/contents.yml') as f:
     contents = yaml.load(f)
 
 tag_template = '<a class="ui tag label">{}</a>'
@@ -9,10 +14,10 @@ image_template = '<div class="column">' \
                  '<img class="ui image centered lazy" data-original="{}" alt="{}" />' \
                  '</div>'
 
-with open('template_modal.txt') as f:
+with open(template_dir + '/template_modal.txt') as f:
    body_template= f.read()
 
-with open('template_top.txt') as f:
+with open(template_dir + '/template_top.txt') as f:
    top_template= f.read()
 
 modal_body = ""
@@ -41,7 +46,7 @@ for content in contents:
     modal_body += body_template.format(title=title, define=define, tag=tag, prize=prize, description=description, link=link, image=image)
     top += top_template.format(top_image=top_image, define=define, title=title)
 
-with open('template/index_template.html') as f:
+with open(template_dir + '/index_template.html') as f:
    html= f.read()
 
 html_body = html.format(modal_body=modal_body, top=top)
