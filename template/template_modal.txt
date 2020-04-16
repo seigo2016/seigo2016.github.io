@@ -12,6 +12,9 @@
             <div class="ui three column stackable grid container">
             {image}
             </div>
+            <div class="ui stackable grid container">
+            {movie}
+            </div>
         </div>
     </div>
 </div>

@@ -27,7 +27,6 @@
     - 詳細2: static/images/smartlock-button.jpg
     - 詳細3: static/images/smartlock-APP.PNG
 
-
 - title: 戦車プラモデルのラジコン化
   define: radio-control-tank
   tag: 
@@ -39,6 +38,8 @@
   top_image: static/images/tank-min.jpg
   image:
     - 詳細: static/images/tank-min.jpg
+  movie:
+    - 動画1: https://www.youtube.com/embed/zETG8R2qTDw
 
 - title: 球体ロボット
   define: sphere-robot
@@ -51,6 +52,9 @@
   top_image: static/images/sphere-min.png
   image:
     - 詳細: static/images/sphere-min.png
+  movie:
+    - 動画1: https://www.youtube.com/embed/0-eGsrVSpKM
+    - 動画2: https://www.youtube.com/embed/9oHtzbt6FJ4
 
 - title: 殺虫剤遠隔噴霧車
   define: spray
@@ -63,6 +67,8 @@
   top_image: static/images/spray.jpg
   image:
     - 詳細: static/images/spray.jpg
+  movie:
+    - 動画1: https://www.youtube.com/embed/Zq57kEpYekE
 
 - title: Digital Signage with RaspberryPi
   define: digital-signage
