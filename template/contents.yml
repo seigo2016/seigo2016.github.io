@@ -65,8 +65,6 @@
   link:
     - Youtube: https://www.youtube.com/embed/Zq57kEpYekE
   top_image: static/images/spray.jpg
-  image:
-    - 詳細: static/images/spray.jpg
   movie:
     - 動画1: https://www.youtube.com/embed/Zq57kEpYekE
 
@@ -97,3 +95,15 @@
     - システム詳細: https://qiita.com/seigo2016/items/d3f44ad19b1c1b54e4f3
     - サーバーシステム: https://pss.seigo2016.com
   top_image: static/images/pss-min.png
+
+- title: 試薬一括検索サイト
+  define: reagent
+  tag:
+    - python3
+    - HTML
+    - CSS
+    - Selenium
+  description: 複数の試薬販売メーカーのサイトから目的の試薬を一括で検索できるサイト
+  link:
+    - サイト: http://reagent.seigo2016.com
+  top_image: static/images/reagent.png
