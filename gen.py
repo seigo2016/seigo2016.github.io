@@ -1,13 +1,17 @@
 import yaml
 import os
 
+# テンプレートディレクトリ
 current_dir = os.path.dirname(os.path.abspath(__file__))
 template_dir = current_dir + '/template'
+contents_image_dir = current_dir + '/static/contents_images/'
 
-
+# コンテンツyaml
 with open(template_dir + '/contents.yml') as f:
     contents = yaml.load(f, Loader=yaml.SafeLoader)
 
+
+# テンプレート 直書き
 tag_template = '<a class="ui tag label">{}</a>'
 link_template = '<p class="large"><a href="{}">{}</a></p>'
 image_template = '<div class="column">' \
@@ -15,6 +19,8 @@ image_template = '<div class="column">' \
                  '</div>'
 movie_template = '<iframe width="720" height="480" src="" data-src="{}" alt="{}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
+
+# テンプレート 
 with open(template_dir + '/template_modal.txt') as f:
    body_template= f.read()
 
@@ -42,13 +48,14 @@ for content in contents:
     image = ""
     if 'image' in content:
         for i in content['image']:
-            image += image_template.format(list(i.values())[0], list(i.keys())[0])
+            image += image_template.format(contents_image_dir + list(i.values())[0], list(i.keys())[0])
     movie = ""
     if 'movie' in content:
         for i in content['movie']:
             movie += movie_template.format(list(i.values())[0], list(i.keys())[0])
 
     top_image = content['top_image']
+    top_image = contents_image_dir + top_image
     modal_body += body_template.format(title=title, define=define, tag=tag, prize=prize, description=description, link=link, image=image, movie=movie)
     top += top_template.format(top_image=top_image, define=define, title=title)
 

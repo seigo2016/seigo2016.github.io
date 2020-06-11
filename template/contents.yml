@@ -9,9 +9,9 @@
   link:
     - ソフトウェアリンク: https://itokake.herokuapp.com/
     - U22 リンク: https://u22procon.com/report/comment.html#_085
-  top_image: static/images/Itokake1-min.png
+  top_image: Itokake1-min.png
   image:
-    - 詳細: static/images/Itokake1-min.png
+    - 詳細: Itokake1-min.png
 
 - title: スマートロック with Raspberry Pi
   define: smartlock
@@ -21,11 +21,11 @@
   description: 既存のドアの鍵の開け閉めをスマートフォンから操作できる「スマートロック」にするシステム
   link:
     - システム詳細: https://qiita.com/seigo2016/items/15fb2bd4fb5322343fd0
-  top_image: static/images/smartlock.jpg
+  top_image: smartlock.jpg
   image:
-    - 詳細: static/images/smartlock.jpg
-    - 詳細2: static/images/smartlock-button.jpg
-    - 詳細3: static/images/smartlock-APP.PNG
+    - 詳細: smartlock.jpg
+    - 詳細2: smartlock-button.jpg
+    - 詳細3: smartlock-APP.PNG
 
 - title: 戦車プラモデルのラジコン化
   define: radio-control-tank
@@ -35,9 +35,9 @@
   description: タミヤの1/35戦車プラモデル(M1A1)にRaspberryPi zero WHを搭載。 <br> Xboxコントローラーでラジコンと同じように操作できるようにした <br> サーボモーターで砲塔の旋回も可能。
   link:
     - システム詳細: https://qiita.com/seigo2016/items/15fb2bd4fb5322343fd0
-  top_image: static/images/tank-min.jpg
+  top_image: tank-min.jpg
   image:
-    - 詳細: static/images/tank-min.jpg
+    - 詳細: tank-min.jpg
   movie:
     - 動画1: https://www.youtube.com/embed/zETG8R2qTDw
 
@@ -49,9 +49,9 @@
   description: プラスチック球の中にRaspberryPi zero WHを搭載し，市販品のSpheroのような球体ロボットを制作した。 <br> Xboxコントローラーで操作可能。
   link:
     - Youtube: https://www.youtube.com/embed/0-eGsrVSpKM
-  top_image: static/images/sphere-min.png
+  top_image: sphere-min.png
   image:
-    - 詳細: static/images/sphere-min.png
+    - 詳細: sphere-min.png
   movie:
     - 動画1: https://www.youtube.com/embed/0-eGsrVSpKM
     - 動画2: https://www.youtube.com/embed/9oHtzbt6FJ4
@@ -64,7 +64,7 @@
   description: 遠隔操作で殺虫剤を噴霧するロボット(?)
   link:
     - Youtube: https://www.youtube.com/embed/Zq57kEpYekE
-  top_image: static/images/spray.jpg
+  top_image: spray.jpg
   movie:
     - 動画1: https://www.youtube.com/embed/Zq57kEpYekE
 
@@ -78,9 +78,9 @@
   description: Raspberry PiとDropboxを使用して，掲示板をデジタル化したデジタルサイネージ。
   link:
     - システム詳細: https://qiita.com/seigo2016/items/c69e2cdf5f56f235739f
-  top_image: static/images/Digital-Signage2-min.png
+  top_image: Digital-Signage2-min.png
   image:
-    - 詳細: static/images/Digital-Signage-min.png
+    - 詳細: Digital-Signage-min.png
 
 - title: Presentation Support System
   define: pss
@@ -94,7 +94,7 @@
   link:
     - システム詳細: https://qiita.com/seigo2016/items/d3f44ad19b1c1b54e4f3
     - サーバーシステム: https://pss.seigo2016.com
-  top_image: static/images/pss-min.png
+  top_image: pss-min.png
 
 - title: 試薬一括検索サイト
   define: reagent
@@ -106,4 +106,26 @@
   description: 複数の試薬販売メーカーのサイトから目的の試薬を一括で検索できるサイト
   link:
     - サイト: http://reagent.seigo2016.com
-  top_image: static/images/reagent.png
+  top_image: reagent.png
+
+- title: Image2PDF Combining&Converter
+  define: image2pdf_cc
+  tag:
+    - Node.js
+    - Electron
+    - HTML
+    - CSS
+  description: 写真を1つのPDFファイルに変換，結合するソフトウェア
+  link:
+    - Booth: http://reagent.seigo2016.com
+    - Google Drive : https://drive.google.com/file/d/1kG6O8ULyHJ9Lnzm4oVZsiQcWyEFcN7kw/view?usp=sharing
+  top_image: pdf_cc.png
+  image: 
+    - トップ: pdf_cc.png
+
+- title: PS2JPC-BOT
+  define: ps2jpc_bot
+  tag:
+    - python3
+  description: PCゲーム PlanetSide2の非公式JPコミュニティで運用中の管理Bot。
+  top_image: ps2jpcbot.png
