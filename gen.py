@@ -4,7 +4,7 @@ import os
 # テンプレートディレクトリ
 current_dir = os.path.dirname(os.path.abspath(__file__))
 template_dir = current_dir + '/template'
-contents_image_dir = current_dir + '/static/contents_images/'
+contents_image_dir = 'static/contents_images/'
 
 # コンテンツyaml
 with open(template_dir + '/contents.yml') as f:
