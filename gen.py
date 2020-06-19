@@ -7,7 +7,7 @@ from jinja2 import Template
 current_dir = os.path.dirname(os.path.abspath(__file__))
 template_dir = current_dir + '/template/'
 contents_dir = current_dir + '/contents/'
-contents_image_dir = current_dir +  '/static/contents_images/'
+contents_image_dir = 'static/contents_images/'
 
 def open_template(file_name:str)  -> str:
     with open(template_dir + file_name) as f:
