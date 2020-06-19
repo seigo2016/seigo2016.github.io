@@ -1,0 +1,95 @@
+<div class="ui stackable profile column cert right aligned">
+    <p class="ui large header">スキル</p>
+    <table class="ui  celled table">
+        <!-- <div class="ui medium header">Language</div> -->
+        <thead>
+            <tr>
+                <th>Language</th>
+                <th>Description</th>
+                <th>Related Skill</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- {{ software_skill }} -->
+            {% for row in software_skill %}
+                <tr>
+                    <td data-label="Language">{{ row[0] }}</td>
+                    <td data-label="Description">{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                </tr>
+            {% endfor %}
+            <!-- <tr>
+                <td data-label="Language">Python</td>
+                <td data-label="Description">現在のメイン言語。Webアプリケーション制作がメイン</td>
+                <td>flask, selenium, numpy, opencv etc...</td>
+            </tr>
+                <td data-label="Language">Node.js</td>
+                <td data-label="Description">Electronと共に扱うことが多い言語</td>
+                <td data-lebel="Related Skill">Electron, sharp, jimp</td>
+            </tr>
+            </tr>
+                <td data-label="Language">JavaScript</td>
+                <td data-label="Description">FlaskでWebアプリを作成する際に利用</td>
+                <td data-lebel="Related Skill">jQuery, Sortable.js</td>
+            </tr>
+            </tr>
+                <td data-label="Language">HTML / CSS</td>
+                <td data-label="Description"></td>
+                <td data-lebel="Related Skill">semantic-ui bootstrap uikit</td>
+            </tr>
+            </tr>
+                <td data-label="Language">Wordpress</td>
+                <td data-label="Description">静的HTMLサイトからWordPressへの移行</td>
+                <td data-lebel="Related Skill"></td>
+            </tr>
+            </tr>
+                <td data-label="Language">Go Lang</td>
+                <td data-label="Description">現在勉強中</td>
+                <td data-lebel="Related Skill"></td>
+            </tr>
+            </tr>
+                <td data-label="Language">C / C++</td>
+                <td data-label="Description">競技プログラミングで使用するために勉強中</td>
+                <td data-lebel="Related Skill"></td>
+            </tr> -->
+        </tbody>
+    </table>
+    <table class="ui celled table">
+        <thead>
+            <tr>
+                <th>Hardware</th>
+                <th>Description</th>
+                <th>Related Skill</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in hardware_skill %}
+            <tr>
+                <td data-label="Hardware">{{ row[0] }}</td>
+                <td data-label="Description">{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+            {% endfor %}
+            <!-- <tr>
+                <td data-label="Hardware">Raspberry Pi</td>
+                <td data-label="Description">Linuxサーバーや，k8sClusterの作成，電子工作に利用</td>
+                <td data-label="Related Skill">Python, GPIO, k8s, Debian, Raspbian</td>
+            </tr>
+            <tr>
+                <td data-label="Hardware">micro:bit</td>
+                <td data-label="Description"></td>
+                <td data-label="Related Skill"></td>
+            </tr>
+            <tr>
+                <td data-label="Hardware">ESP32</td>
+                <td data-label="Description"></td>
+                <td data-label="Related Skill">Arduino IDE</td>
+            </tr>
+            <tr>
+                <td data-label="Hardware">Arduino</td>
+                <td data-label="Description"></td>
+                <td data-label="Related Skill"></td>
+            </tr> -->
+        </tbody>
+    </table>
+</div>

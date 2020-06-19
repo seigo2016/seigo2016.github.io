@@ -127,5 +127,14 @@
   define: ps2jpc_bot
   tag:
     - python3
-  description: PCゲーム PlanetSide2の非公式JPコミュニティで運用中の管理Bot。
+    - discordpy
+  description: PCゲーム PlanetSide2の非公式JPコミュニティで運用中の管理Bot。役職管理やゲーム内イベント告知，サーバー管理等の機能を実装。
   top_image: ps2jpcbot.png
+
+# - title: times2twitter
+#   define: times2twitter
+#   tag:
+#     - python3
+#     - slack-api
+#   description: Slackの#timesチャンネルをまとめてTwitterのTLのように表示するBot.
+#   top_image: 

@@ -1,15 +1,45 @@
 import yaml
 import os
+from jinja2 import Template
+
 
 # テンプレートディレクトリ
 current_dir = os.path.dirname(os.path.abspath(__file__))
-template_dir = current_dir + '/template'
-contents_image_dir = 'static/contents_images/'
+template_dir = current_dir + '/template/'
+contents_dir = current_dir + '/contents/'
+contents_image_dir = current_dir +  '/static/contents_images/'
 
-# コンテンツyaml
-with open(template_dir + '/contents.yml') as f:
-    contents = yaml.load(f, Loader=yaml.SafeLoader)
+def open_template(file_name:str)  -> str:
+    with open(template_dir + file_name) as f:
+        result = f.read()
+    return result
 
+def open_contents(file_name:str) -> str:
+    with open(contents_dir + file_name) as f:
+        result = yaml.load(f, Loader=yaml.SafeLoader)
+    return result
+
+def generate_html(html:str, data:dict) -> str:
+    html = Template(html)
+    result = html.render(data)
+    return result
+
+def generate_skill(html:str, contents_type:int) -> list:
+    contents = open_contents(html)
+    result = []
+    if contents_type == 0:
+        for row in contents:
+            language = row["language"]
+            description = row["description"]
+            related_skill = row["related_skill"]
+            result.append([language, description, related_skill])
+    elif contents_type == 1:
+        for row in contents:
+            language = row["hardware"]
+            description = row["description"]
+            related_skill = row["related_skill"]
+            result.append([language, description, related_skill])
+    return result
 
 # テンプレート 直書き
 tag_template = '<a class="ui tag label">{}</a>'
@@ -20,12 +50,12 @@ image_template = '<div class="column">' \
 movie_template = '<iframe width="720" height="480" src="" data-src="{}" alt="{}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
 
-# テンプレート 
-with open(template_dir + '/template_modal.txt') as f:
-   body_template= f.read()
-
-with open(template_dir + '/template_top.txt') as f:
-   top_template= f.read()
+# モーダルインデックステンプレート
+modal_body_template = open_template('template_modal.html')
+# モーダル中身テンプレート
+modal_top_template = open_template('template_top.html')
+# コンテンツyaml
+contents = open_contents("contents.yaml")
 
 modal_body = ""
 top = ""
@@ -56,13 +86,30 @@ for content in contents:
 
     top_image = content['top_image']
     top_image = contents_image_dir + top_image
-    modal_body += body_template.format(title=title, define=define, tag=tag, prize=prize, description=description, link=link, image=image, movie=movie)
-    top += top_template.format(top_image=top_image, define=define, title=title)
+    modal_body += modal_body_template.format(title=title, define=define, tag=tag, prize=prize, description=description, link=link, image=image, movie=movie)
+    top += modal_top_template.format(top_image=top_image, define=define, title=title)
 
-with open(template_dir + '/index_template.html') as f:
-   html= f.read()
 
-html_body = html.format(modal_body=modal_body, top=top)
+skill_html = open_template("skill.html")
+software_skill = generate_skill("software_skill.yaml", 0)
+hardware_skill = generate_skill("hardware_skill.yaml", 1)
+data = {'software_skill' : software_skill,
+        'hardware_skill' : hardware_skill
+}
+skill_body = generate_html(skill_html, data)
+
+
+body_html = open_template("/body.html")
+header_html = open_template("/header.html")
+footer_html = open_template("/footer.html")
+data = {
+  'modal_body' : modal_body,
+  'top' : top,
+  'header_html' : header_html,
+  'footer_html' : footer_html,
+  'skill_html' : skill_body
+}
+html_body = generate_html(body_html, data)
 
 with open('index.html', mode='w') as f:
-   f.write(html_body)
+    f.write(html_body)

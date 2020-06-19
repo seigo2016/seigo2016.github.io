@@ -1,0 +1,11 @@
+- hardware: Raspberry Pi
+  description: Linuxサーバーや，k8sClusterの作成，電子工作に利用
+  related_skill: Python, GPIO, k8s, Debian, Raspbian
+
+- hardware: micro:bit
+  description: ー
+  related_skill: ー
+
+- hardware: ESP32
+  description: ー
+  related_skill: arduino IDE
