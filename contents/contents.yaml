@@ -137,6 +137,7 @@
 #     - python3
 #     - slack-api
 #   description: Slackの#timesチャンネルをまとめてTwitterのTLのように表示するBot.
+<<<<<<< HEAD
 #   top_image: 
 
 - title: BFV Leader Board
@@ -146,3 +147,6 @@
   description: FPSゲームBFVのAPIから情報を取得し，いくつかの情報をピックアップして表示する。
   top_image: preview.png
 
+=======
+#   top_image: 
+>>>>>>> origin/master
