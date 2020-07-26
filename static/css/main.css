@@ -1,0 +1,48 @@
+.title-name{
+    font-size: 45pt;
+    text-align: center;
+    line-height: 150px;
+    color: #eeeeee;
+}
+.top-header{
+    background-image: url('../images/bg-min.jpg');
+    height: 150px;
+}
+.cert{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.movie{
+    margin: auto;
+    text-align: center;
+}
+.content{
+    width: 90%;
+    margin: auto;
+}
+.header-text{
+    font-size: large;
+}
+.segment{
+    /* width: 200px; */
+	height: 100%;
+}
+.fluid{
+    height: 100% ;
+}
+
+/* @media screen and (max-width: 499px) { 
+body{
+    font-size: 18px;
+}
+}
+@media screen and (min-width: 500px) and (max-width: 999px) {
+.ui.modal.content{
+    font-size: 18px;
+}
+}
+@media screen and (min-width:1000px) {
+} */

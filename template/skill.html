@@ -1,0 +1,45 @@
+<div class="ui stackable profile column cert right aligned">
+    <p class="ui large header">スキル</p>
+    <table class="ui  celled table">
+        <!-- <div class="ui medium header">Language</div> -->
+        <thead>
+            <tr>
+                <th>Language</th>
+                <th>Term (year)</th>
+                <th>Description</th>
+                <th>Related Skill</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- {{ software_skill }} -->
+            {% for row in software_skill %}
+                <tr>
+                    <td data-label="Language">{{ row[0] }}</td>
+                    <td data-label="Term">{{ row[1] }}</td>
+                    <td data-label="Description">{{ row[2] }}</td>
+                    <td>{{ row[2] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="ui celled table">
+        <thead>
+            <tr>
+                <th>Hardware</th>
+                <th>Term</th>
+                <th>Description</th>
+                <th>Related Skill</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in hardware_skill %}
+            <tr>
+                <td data-label="Hardware">{{ row[0] }}</td>
+                <td data-label="Term">{{ row[1] }}</td>
+                <td data-label="Description">{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
