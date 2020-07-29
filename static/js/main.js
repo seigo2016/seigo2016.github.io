@@ -11,7 +11,6 @@ function youtube_init() {
         let id = url.match(/[\/?=]([a-zA-Z0-9_-]{11})[&\?]?/)[1];
         console.log(id)
         let img = document.createElement('img');
-        img.classList.add("lazy-load")
         img.width = 720;
         img.onclick = function(){
             parent = this.parentNode;
@@ -21,12 +20,12 @@ function youtube_init() {
             movie.autoplay = '1'
             movie.width = 720;
             movie.height = 480;
-            console.log(parent)
+            // console.log(parent)
             parent.insertBefore(movie, this);
             this.remove();
         }
-        img.src = 'http://i.ytimg.com/vi/'+id+'/maxresdefault.jpg';
-        console.log(img.src)
+        img.src = 'https://i.ytimg.com/vi/'+id+'/maxresdefault.jpg';
+        // console.log(img.src)
         movies[i].insertBefore(img, iframe);
         iframe.remove();
     }}
