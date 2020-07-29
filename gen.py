@@ -86,7 +86,7 @@ link_template = '<p class="large"><a href="{}">{}</a></p>'
 image_template = '<div class="column">' \
                  '<img class="ui image centered lazy-load" data-src="{}" alt="{}" />' \
                  '</div>'
-movie_template = '<iframe width="720" height="480" src="" data-src="{}" alt="{}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+movie_template = '<div class="movie"> <iframe width="720" height="480" src="" data-src="{}" alt="{}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
 
 
 # モーダルインデックステンプレート
