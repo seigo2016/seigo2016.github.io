@@ -11,6 +11,7 @@ function youtube_init() {
         let id = url.match(/[\/?=]([a-zA-Z0-9_-]{11})[&\?]?/)[1];
         console.log(id)
         let img = document.createElement('img');
+        img.classList.add("lazy-load")
         img.width = 720;
         img.onclick = function(){
             parent = this.parentNode;
