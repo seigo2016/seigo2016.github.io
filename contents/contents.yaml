@@ -1,7 +1,7 @@
 - title: 糸かけ曼荼羅色シミュレーター
   define: itokake
   tag: 
-    - python3
+    - Python3
     - html
     - css
   prize: U22プログラミングコンテスト2019 日本事務器賞受賞
@@ -16,7 +16,7 @@
 - title: スマートロック with Raspberry Pi
   define: smartlock
   tag: 
-    - python3
+    - Python3
     - Raspberry Pi
   description: 既存のドアの鍵の開け閉めをスマートフォンから操作できる「スマートロック」にするシステム
   link:
@@ -30,7 +30,7 @@
 - title: 戦車プラモデルのラジコン化
   define: radio-control-tank
   tag: 
-    - python3
+    - Python3
     - Raspberry Pi
   description: タミヤの1/35戦車プラモデル(M1A1)にRaspberryPi zero WHを搭載。 <br> Xboxコントローラーでラジコンと同じように操作できるようにした <br> サーボモーターで砲塔の旋回も可能。
   link:
@@ -44,7 +44,7 @@
 - title: 球体ロボット
   define: sphere-robot
   tag: 
-    - python3
+    - Python3
     - Raspberry Pi
   description: プラスチック球の中にRaspberryPi zero WHを搭載し，市販品のSpheroのような球体ロボットを制作した。 <br> Xboxコントローラーで操作可能。
   link:
@@ -72,7 +72,7 @@
   define: digital-signage
   prize: みんなのラズパイコンテスト RaspberryPi財団賞受賞
   tag: 
-    - python3
+    - Python3
     - Raspberry Pi
     - Google Drive API
   description: Raspberry PiとDropboxを使用して，掲示板をデジタル化したデジタルサイネージ。
@@ -86,7 +86,7 @@
   define: pss
   prize: N予備校 Webアプリコンテスト 2019冬 N高健闘賞受賞
   tag: 
-    - python3
+    - Python3
     - HTML
     - CSS
     - Electron
@@ -99,7 +99,7 @@
 - title: 試薬一括検索サイト
   define: reagent
   tag:
-    - python3
+    - Python3
     - HTML
     - CSS
     - Selenium
@@ -126,7 +126,7 @@
 - title: PS2JPC-BOT
   define: ps2jpc_bot
   tag:
-    - python3
+    - Python3
     - discordpy
   description: PCゲーム PlanetSide2の非公式JPコミュニティで運用中の管理Bot。役職管理やゲーム内イベント告知，サーバー管理等の機能を実装。
   top_image: ps2jpcbot.png
@@ -134,7 +134,7 @@
 # - title: times2twitter
 #   define: times2twitter
 #   tag:
-#     - python3
+#     - Python3
 #     - slack-api
 #   description: Slackの#timesチャンネルをまとめてTwitterのTLのように表示するBot.
 #   top_image: 
