@@ -81,7 +81,7 @@ def generate_skill(html: str, contents_type: int) -> list:
 
 
 # テンプレート 直書き
-tag_template = '<span class="w-1/6 m-2 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">{}</span>'
+tag_template = '<span class="mx-2 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 items-center">{}</span>'
 link_template = '<p class="large"><a href="{}">{}</a></p>'
 image_template = '<div class="column">' \
                  '<img width="320" class="lazy-load" data-src="{}" alt="{}" />' \
