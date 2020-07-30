@@ -81,18 +81,18 @@ def generate_skill(html: str, contents_type: int) -> list:
 
 
 # テンプレート 直書き
-tag_template = '<a class="ui tag label">{}</a>'
+tag_template = '<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{}</span>'
 link_template = '<p class="large"><a href="{}">{}</a></p>'
 image_template = '<div class="column">' \
-                 '<img class="ui image centered lazy-load" data-src="{}" alt="{}" />' \
+                 '<img width="320" class="lazy-load" data-src="{}" alt="{}" />' \
                  '</div>'
-movie_template = '<div class="movie"> <iframe width="720" height="480" src="" data-src="{}" alt="{}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
+movie_template = '<div class="movie"> <iframe width="640" height="480" src="" data-src="{}" alt="{}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
 
 
 # モーダルインデックステンプレート
-modal_body_template = open_template('template_modal.html')
+# modal_body_template = open_template('template_modal.html')
 # モーダル中身テンプレート
-modal_top_template = open_template('template_top.html')
+modal_top_template = open_template('template_contents.html')
 # コンテンツyaml
 contents = open_contents("contents.yaml")
 
@@ -128,17 +128,16 @@ for content in contents:
 
     top_image = content['top_image']
     top_image = contents_image_dir + top_image
-    modal_body += modal_body_template.format(
+    modal_body = modal_top_template.format(
         title=title,
-        define=define,
+        # define=define,
         tag=tag,
         prize=prize,
         description=description,
         link=link,
-        image=image,
+        image=top_image,
         movie=movie)
-    top += modal_top_template.format(top_image=top_image,
-                                     define=define, title=title)
+    top += modal_body
 
 
 skill_html = open_template("skill.html")
@@ -154,7 +153,7 @@ body_html = open_template("/body.html")
 header_html = open_template("/header.html")
 footer_html = open_template("/footer.html")
 data = {
-    'modal_body': modal_body,
+    # 'modal_body': modal_body,
     'top': top,
     'header_html': header_html,
     'footer_html': footer_html,

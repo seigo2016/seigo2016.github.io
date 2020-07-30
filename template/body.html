@@ -1,62 +1,51 @@
 {{ header_html }}
-<body>
-    <header>
-        <div class="ui secondary  menu">
-            <a class="item active header-text">Home</a>
-            <a class="item header-text" href="https://github.com/seigo2016/" target="_blank">Github</a>
-            <a class="item header-text" href="https://twitter.com/seigo2018" target="_blank">Twitter</a>
-        </div>
-    </header>
-    <div class="top-header">
-        <div class="title-name">seigo2016  Portfolio</div>
-    </div>
     <div class="content">
-        <div class="ui four column grid stackable centered doubling ">
-            {{ top }}
-        </div>
-        {{ modal_body }}
+        <!-- {{ modal_body }} -->
         <!-- スキル -->
         {{ skill_html }}
         <!-- 資格 -->
-        <div class="ui stackable profile column cert right aligned">
-            <p class="ui large header">取得資格</p>
-            <table class="ui definition table">
-                <tbody>
-                    <tr>
+        <div class="">
+            <p class="text-2xl mt-5">取得資格</p>
+            <table class="table-auto mt-5 w-full">
+                <tbody class="">
+                    <tr class="border-b">
                         <td>情報検定 情報活用試験1級</td>
                     </tr>
-                    <tr>
+                    <tr class="border-b">
                         <td>情報検定情報システム試験 基本スキル・プログラミングスキル プログラマ認定</td>
                     </tr>
-                    <tr>
+                    <tr class="border-b">
                         <td>ITパスポート試験</td>
                     </tr>
-                    <tr>
+                    <tr class="border-b">
                         <td>実用英語技能検定準2級</td>
                     </tr>
-                    <tr>
+                    <tr class="border-b">
                         <td>日本漢字能力検定2級</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <!-- 受賞歴 -->
-        <p class="large"></p>
-        <div class="ui stackable profile column cert right aligned">
-            <p class="ui large header">受賞歴</p>
-            <table class="ui definition table">
+        <div class="">
+            <p class="text-2xl mt-5">受賞歴</p>
+            <table class="table-auto mt-5 w-full">
                 <tbody>
-                    <tr>
+                    <tr class="border-b">
                         <td>たのしいmicro:bitコンテスト2019 特別賞</td>
                     </tr>
-                    <tr>
+                    <tr class="border-b">
                         <td>U22プログラミングコンテスト2019 入賞・日本事務器賞</td>
                     </tr>
-                    <tr>
+                    <tr class="border-b">
                         <td>みんなのラズパイコンテスト RaspberryPi財団賞</td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <p class="text-2xl mt-5">過去制作物</p>
+        <div class="w-full mt-5">
+            {{ top }}
         </div>
 </body>
 

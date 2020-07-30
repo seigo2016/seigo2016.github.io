@@ -1,43 +1,41 @@
-<div class="ui stackable profile column cert right aligned">
-    <p class="ui large header">スキル</p>
-    <table class="ui  celled table">
-        <!-- <div class="ui medium header">Language</div> -->
+<div class="">
+    <p class="text-2xl mt-5 ml-1">スキル</p>
+    <table class="table-auto mt-5 w-full">
         <thead>
-            <tr>
-                <th>Language</th>
-                <th>Term (year)</th>
-                <th>Description</th>
-                <th>Related Skill</th>
+            <tr class="bg-gray-100">
+                <th class="border-b bg-gray-100">Language</th>
+                <th class="border-b">Term (year)</th>
+                <th class="border-b">Description</th>
+                <th class="border-b">Related Skill</th>
             </tr>
         </thead>
         <tbody>
-            <!-- {{ software_skill }} -->
             {% for row in software_skill %}
-                <tr>
-                    <td data-label="Language">{{ row[0] }}</td>
-                    <td data-label="Term">{{ row[1] }}</td>
-                    <td data-label="Description">{{ row[2] }}</td>
-                    <td>{{ row[2] }}</td>
+                <tr class="">
+                    <td class="border-b bg-gray-100 border-grey-light px-1" data-label="Language">{{ row[0] }}</td>
+                    <td class="border-b border-grey-light px-1 text-center" data-label="Term">{{ row[1] }}</td>
+                    <td class="border-b border-grey-light px-1" data-label="Description">{{ row[2] }}</td>
+                    <td class="border-b border-grey-light">{{ row[3] }}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-    <table class="ui celled table">
+    <table class="table-auto mt-5 w-full">
         <thead>
-            <tr>
-                <th>Hardware</th>
-                <th>Term</th>
-                <th>Description</th>
-                <th>Related Skill</th>
+            <tr class="bg-gray-100">
+                <th class="border-b bg-gray-100 px-1">Hardware</th>
+                <th class="border-b px-1">Term</th>
+                <th class="border-b px-1">Description</th>
+                <th class="border-b px-1">Related Skill</th>
             </tr>
         </thead>
         <tbody>
             {% for row in hardware_skill %}
             <tr>
-                <td data-label="Hardware">{{ row[0] }}</td>
-                <td data-label="Term">{{ row[1] }}</td>
-                <td data-label="Description">{{ row[2] }}</td>
-                <td>{{ row[3] }}</td>
+                <td class="border-b bg-gray-100 border-grey-light px-1" data-label="Hardware">{{ row[0] }}</td>
+                <td class="border-b border-grey-light px-1 text-center" data-label="Term">{{ row[1] }}</td>
+                <td class="border-b border-grey-light px-1" data-label="Description">{{ row[2] }}</td>
+                <td class="border-b border-grey-light">{{ row[3] }}</td>
             </tr>
             {% endfor %}
         </tbody>

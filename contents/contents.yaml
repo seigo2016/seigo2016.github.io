@@ -36,8 +36,8 @@
   link:
     - システム詳細: https://qiita.com/seigo2016/items/15fb2bd4fb5322343fd0
   top_image: tank-min.jpg
-  image:
-    - 詳細: tank-min.jpg
+  # image:
+    # - 詳細: tank-min.jpg
   movie:
     - 動画1: https://www.youtube.com/embed/zETG8R2qTDw
 

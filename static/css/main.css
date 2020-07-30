@@ -18,6 +18,7 @@
 .movie{
     margin: auto;
     text-align: center;
+    position:relative;
 }
 .content{
     width: 90%;
@@ -27,25 +28,17 @@
     font-size: large;
 }
 .segment{
-    /* width: 200px; */
 	height: 100%;
 }
 .fluid{
     height: 100% ;
 }
 
-/* @media screen and (max-width: 499px) { 
-body{
-    font-size: 18px;
+.image-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-}
-@media screen and (min-width: 500px) and (max-width: 999px) {
-.ui.modal.content{
-    font-size: 18px;
-}
-}
-@media screen and (min-width:1000px) {
-} */
 
 .lazy-load, .lazy-loaded {
     -webkit-transition: opacity 0.3s;
@@ -57,3 +50,46 @@ body{
   }
   
 .lazy-loaded { opacity: 1; }
+
+.modalArea {
+    visibility: hidden;
+    opacity : 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+  }
+  
+  .modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+  }
+  
+  .modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 70%;
+    max-width: 800px;
+    padding: 10px 30px;
+    background-color: #fff;
+    height: 90%;
+    overflow: auto;
+  }
+  
+  .closeModal {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  
+  .is-show { 
+    visibility: visible;
+    opacity : 1;
+  }

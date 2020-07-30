@@ -1,6 +1,6 @@
 - hardware: Raspberry Pi
   term: ~ 4
-  description: Linuxサーバーや，k8sClusterの作成，電子工作に利用
+  description: サーバーや，k8sClusterの作成，電子工作
   related_skill: Python, GPIO, k8s, Debian, Raspbian
 
 - hardware: micro:bit
