@@ -131,7 +131,6 @@ for content in contents:
     top_image = contents_image_dir + top_image
     modal_body = modal_top_template.format(
         title=title,
-        # define=define,
         tag=tag,
         prize=prize,
         description=description,
@@ -154,7 +153,6 @@ body_html = open_template("/body.html")
 header_html = open_template("/header.html")
 footer_html = open_template("/footer.html")
 data = {
-    # 'modal_body': modal_body,
     'top': top,
     'header_html': header_html,
     'footer_html': footer_html,

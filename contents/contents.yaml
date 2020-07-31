@@ -33,8 +33,6 @@
     - Python3
     - Raspberry Pi
   description: タミヤの1/35戦車プラモデル(M1A1)にRaspberryPi zero WHを搭載。 <br> Xboxコントローラーでラジコンと同じように操作できるようにした <br> サーボモーターで砲塔の旋回も可能。
-  link:
-    - システム詳細: https://qiita.com/seigo2016/items/15fb2bd4fb5322343fd0
   top_image: tank-min.jpg
   # image:
     # - 詳細: tank-min.jpg
