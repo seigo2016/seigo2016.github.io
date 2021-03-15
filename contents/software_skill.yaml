@@ -24,7 +24,7 @@
   description: 静的HTMLサイトからWordPressへの移行経験有
   related_skill: ー
 
-- language: Go Lang
+- language: Go
   term: ~ 1
   description: 現在勉強中
   related_skill: gin, echo, google-api-go-client

@@ -33,15 +33,10 @@ function youtube_init() {
         }
         img.src = 'https://i.ytimg.com/vi/'+id+'/maxresdefault.jpg';
         movies[i].insertBefore(img, iframe);
-        // text.style = "background-color: #000000; position:absolute; color: #ffffff; margin: 0; \
-        // padding: 0; \
-        // top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); \
-        // -ms-transform: translate(-50%, -50%);"
         iframe.remove();
     }}
 }
 
 window.onload = function() {
     youtube_init()
-    // document.getElementsByClassName('image').height ='200px';
 }
