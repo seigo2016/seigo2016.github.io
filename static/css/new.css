@@ -1,10 +1,11 @@
 @font-face{
     font-family: "honokamarugo";
     src: url("font_1_honokamarugo_1.1.ttf");
+    font-display: swap;
 }
 /*  */
 body{
-    font-family: "honokamarugo";
+    font-family: "honokamarugo", sans-serif;
 }
 
 /* NavBar */
