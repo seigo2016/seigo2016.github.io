@@ -8,6 +8,10 @@ body{
     font-family: "honokamarugo", sans-serif;
 }
 
+h1{
+    margin-left: 0%;
+}
+
 /* NavBar */
 .nav-list {
     margin-top: 0;
@@ -20,7 +24,7 @@ body{
     border-radius: 3px;
 }
 .nav-item {
-    margin-left: 3.5vw;
+    margin-left: 3vw;
     padding: 5px;
     list-style: none;
 }
@@ -36,7 +40,7 @@ body{
 }
 
 .title{
-    margin-left: 40px;
+    margin-left: 35px;
     margin-bottom: 0;
 }
 
@@ -141,15 +145,31 @@ img{
 
 @media screen and (max-width: 1080px) {
     body{
-        font-size: calc(16px + ((1vw - 6.4px)*3.571));
+        font-size: calc(18px + ((1vw - 6.4px)*3.571));
     }
+    h1{
+        font-size: calc(36px + ((1vw - 6.4px)*3.571));
+    }
+    h2{
+        font-size: calc(32px + ((1vw - 6.4px)*3.571));
+    }
+    .title{
+        text-align: center;
+    }
+    
     .arch-ul li {
         margin-left: 2vw;
     }
     .card{
-        width: 48%;
+        width: 98%;
         height: auto;
         border: solid 1px whitesmoke;
-        min-width: 48%;
+        min-width: 98%;
+    }
+    .menu{
+        justify-content: center;
+    }
+    .nav-item{
+        font-size: calc(24px + ((1vw - 6.4px)*3.571));
     }
 }
