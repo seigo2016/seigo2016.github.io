@@ -1,175 +1,187 @@
-@font-face{
-    font-family: "honokamarugo";
-    src: url("font_1_honokamarugo_kai.woff2");
-    font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
 /*  */
-body{
-    font-family: "honokamarugo", sans-serif;
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-h1{
-    margin-left: 0%;
+h1 {
+  margin-left: 0%;
 }
 
 /* NavBar */
 .nav-list {
-    margin-top: 0;
-    background: white;
-    display: flex;
-    padding: 1vw 0;
-    justify-content: flex-start;
-    align-items: center;
-    border-bottom: solid 4px whitesmoke;
-    border-radius: 3px;
+  margin-top: 0;
+  background: white;
+  display: flex;
+  padding: 1vw 0;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: solid 4px whitesmoke;
+  border-radius: 3px;
 }
 .nav-item {
-    margin-left: 3vw;
-    padding: 5px;
-    list-style: none;
+  margin-left: 3vw;
+  padding: 5px;
+  list-style: none;
 }
 
 .nav-item a {
-    text-decoration: none;
-    color: black;
-    transition: all 200ms ease-in;
+  text-decoration: none;
+  color: black;
+  transition: all 200ms ease-in;
 }
 
 .nav-item a:hover {
-    color: gray;
+  color: gray;
 }
 
-.title{
-    margin-left: 35px;
-    margin-bottom: 0;
+.title {
+  margin-left: 35px;
+  margin-bottom: 0;
 }
 
-.container{
-    width: 95%;
-    margin: auto;
+.container {
+  width: 95%;
+  margin: auto;
 }
 
-.skill{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.skill,
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.card{
-    width: 32%;
-    height: auto;
-    border: solid 1px whitesmoke;
-    min-width: 32%;
+img {
+  width: 80%;
+  object-fit: contain;
+  min-height: 3vw;
 }
 
-img{
-    width: 80%;
-    object-fit: contain;
-    min-height: 20vw;
+.card {
+  width: 32%;
+  height: auto;
+  border: solid 1px whitesmoke;
+  min-width: 32%;
 }
 
-.card-title{
-    width: 100%;
-    height: auto;
-    padding: 20px 18px;
-    background: white;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 26px;
+.card-mini {
+  width: 10%;
+  height: auto;
+  border: solid 1px whitesmoke;
+  min-width: 10%;
 }
 
-.card-img{
-    max-width: 40%;
-    text-align: center;
-    margin: auto;
-    margin-top: 2vw;
-    margin-bottom: 0%;
+.card-title {
+  width: 100%;
+  height: auto;
+  padding: 1vw 1vw;
+  background: white;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 26px;
 }
-.card-text{
-    margin: 1vw;
-    text-align: center;
-    overflow-wrap: break-word;
-    font-size: 18px;
+
+.card-img {
+  max-width: 100%;
+  text-align: center;
+  margin: auto;
+  margin-top: 1vw;
+  margin-bottom: 0%;
+}
+
+.card-text {
+  margin: 1vw;
+  text-align: center;
+  font-size: 18px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .arch-ul {
-    padding: 1.5vw 1.5vw 1.5vw 2vw;
-    box-shadow :0px 0px 3px silver;
-    border: solid 1px whitesmoke;
-    position: relative;
-    margin-left: 1vw;
+  padding: 1.5vw 1.5vw 1.5vw 2vw;
+  box-shadow: 0px 0px 3px silver;
+  border: solid 1px whitesmoke;
+  position: relative;
+  margin-left: 1vw;
 }
 .about-ul {
-    box-shadow : none;
-    border: none;
-    font-size: 20px;
+  box-shadow: none;
+  border: none;
+  font-size: 20px;
 }
-  
+
 .arch-ul li {
-    line-height: 1.5;
-    padding: 0.5vw 0;
-    list-style-type: none;
+  line-height: 1.5;
+  padding: 0.5vw 0;
+  list-style-type: none;
 }
 
 .arch-ul li:before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f0da";
-    position: absolute;
-    font-weight: 900;
-    left : 1vw;
+  font-family: "Font Awesome 5 Free";
+  content: "\f0da";
+  position: absolute;
+  font-weight: 900;
+  left: 1vw;
 }
 
 .tag {
-	display: inline-block;
-	margin: 0 0.2 0.4vw 0;
-	padding: 0.2vw;
-	line-height: 1;
-	color: gray;
-	background-color: white;
-	border: 1px solid gray;
-    border-radius: 2px;
+  display: inline-block;
+  margin: 0 0.2 0.4vw 0;
+  padding: 0.2vw;
+  line-height: 1;
+  color: gray;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 2px;
 }
 
 .tag-list {
-    text-align: center;
-    margin: 1vw;
+  text-align: center;
+  margin: 1vw;
 }
 
-.project-card-img{
-    max-width: 80%;
-    text-align: center;
-    margin: auto;
-    margin-top: 2vw;
-    margin-bottom: 0%;
+.project-card-img {
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+  margin-top: 2vw;
+  margin-bottom: 0%;
 }
 
-@media screen and (max-width: 1080px) {
-    body{
-        font-size: calc(18px + ((1vw - 6.4px)*3.571));
-    }
-    h1{
-        font-size: calc(36px + ((1vw - 6.4px)*3.571));
-    }
-    h2{
-        font-size: calc(32px + ((1vw - 6.4px)*3.571));
-    }
-    .title{
-        text-align: center;
-    }
-    
-    .arch-ul li {
-        margin-left: 2vw;
-    }
-    .card{
-        width: 98%;
-        height: auto;
-        border: solid 1px whitesmoke;
-        min-width: 98%;
-    }
-    .menu{
-        justify-content: center;
-    }
-    .nav-item{
-        font-size: calc(24px + ((1vw - 6.4px)*3.571));
-    }
+@media screen and (max-width: 720px) {
+  body {
+    font-size: calc(18px + ((1vw - 6.4px) * 3.571));
+  }
+  h1 {
+    font-size: calc(36px + ((1vw - 6.4px) * 3.571));
+  }
+  h2 {
+    font-size: calc(32px + ((1vw - 6.4px) * 3.571));
+  }
+  .title {
+    text-align: center;
+  }
+
+  .arch-ul li {
+    margin-left: 2vw;
+  }
+  .card {
+    width: 98%;
+    height: auto;
+    border: solid 1px whitesmoke;
+    min-width: 98%;
+  }
+  .card-mini {
+    width: 48%;
+    height: auto;
+    border: solid 1px whitesmoke;
+    min-width: 48%;
+  }
+  .menu {
+    justify-content: center;
+  }
+  .nav-item {
+    font-size: calc(24px + ((1vw - 6.4px) * 3.571));
+  }
 }
