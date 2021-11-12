@@ -2,19 +2,18 @@
 /*  */
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
+  text-align: center;
 }
-
-h1 {
-  margin-left: 0%;
+.fab {
+  font-style: normal;
 }
-
 /* NavBar */
 .nav-list {
   margin-top: 0;
   background: white;
   display: flex;
   padding: 1vw 0;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   border-bottom: solid 4px whitesmoke;
   border-radius: 3px;
@@ -99,19 +98,25 @@ img {
 }
 
 .arch-ul {
+  margin: auto;
+  width: 65%;
   padding: 1.5vw 1.5vw 1.5vw 2vw;
   box-shadow: 0px 0px 3px silver;
+  display: table;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
   border: solid 1px whitesmoke;
-  position: relative;
-  margin-left: 1vw;
 }
 .about-ul {
+  width: 55%;
   box-shadow: none;
   border: none;
   font-size: 20px;
 }
 
 .arch-ul li {
+  margin: auto;
   line-height: 1.5;
   padding: 0.5vw 0;
   list-style-type: none;
@@ -119,10 +124,9 @@ img {
 
 .arch-ul li:before {
   font-family: "Font Awesome 5 Free";
-  content: "\f0da";
-  position: absolute;
+  content: "\f105";
   font-weight: 900;
-  left: 1vw;
+  margin-right: 2vw;
 }
 
 .tag {
