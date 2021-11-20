@@ -7,6 +7,27 @@ body {
 .fab {
   font-style: normal;
 }
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 28px;
+  position: relative;
+  margin-top: 2vw;
+  padding: 0.5vw;
+}
+
+h2:before {
+  position: absolute;
+  bottom: 0vw;
+  left: calc(50% - 2.5vw);
+  width: 5vw;
+  height: 0.25vw;
+  content: "";
+  border-radius: 0.15vw;
+  background: #000;
+}
+
 /* NavBar */
 .nav-list {
   margin-top: 0;
@@ -40,7 +61,7 @@ body {
 }
 
 .container {
-  width: 95%;
+  width: 90%;
   margin: auto;
 }
 
@@ -109,7 +130,7 @@ img {
   border: solid 1px whitesmoke;
 }
 .about-ul {
-  width: 55%;
+  width: 35%;
   box-shadow: none;
   border: none;
   font-size: 20px;
@@ -155,7 +176,7 @@ img {
 
 @media screen and (max-width: 720px) {
   body {
-    font-size: calc(18px + ((1vw - 6.4px) * 3.571));
+    font-size: calc(16px + ((1vw - 6.4px) * 3.571));
   }
   h1 {
     font-size: calc(36px + ((1vw - 6.4px) * 3.571));
@@ -166,9 +187,15 @@ img {
   .title {
     text-align: center;
   }
-
+  .about-ul {
+    width: 55%;
+  }
   .arch-ul li {
     margin-left: 2vw;
+  }
+  .arch-ul {
+    width: 90%;
+    font-size: calc(20px + ((1vw - 6.4px) * 3.571));
   }
   .card {
     width: 98%;
@@ -182,10 +209,22 @@ img {
     border: solid 1px whitesmoke;
     min-width: 30%;
   }
+  .card-title {
+    font-size: 20px;
+  }
+  .card-mini img {
+    width: 75%;
+  }
+  .card-img img {
+    width: 50%;
+  }
+  .tag {
+    font-size: calc(20px + ((1vw - 6.4px) * 3.571));
+  }
   .menu {
     justify-content: center;
   }
   .nav-item {
-    font-size: calc(24px + ((1vw - 6.4px) * 3.571));
+    font-size: calc(20px + ((1vw - 6.4px) * 3.571));
   }
 }
