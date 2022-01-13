@@ -176,7 +176,7 @@ img {
 
 @media screen and (max-width: 720px) {
   body {
-    font-size: calc(16px + ((1vw - 6.4px) * 3.571));
+    font-size: calc(18px + ((1vw - 6.4px) * 3.571));
   }
   h1 {
     font-size: calc(36px + ((1vw - 6.4px) * 3.571));
