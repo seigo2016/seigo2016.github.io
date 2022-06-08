@@ -71,6 +71,7 @@ h2:before {
 .flex{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .skill,
