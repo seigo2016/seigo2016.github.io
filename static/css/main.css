@@ -164,8 +164,8 @@ img {
 }
 
 .arch-ul li:before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f105";
+  font-family: "icomoon";
+  content: "\f0da";
   font-weight: 900;
   margin-right: 2vw;
 }
