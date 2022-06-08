@@ -13,14 +13,14 @@
         <meta property="og:type" content="website" />
         <meta property="og:title" content="seigo2016のポートフォリオ" />
         <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZWB29Z91N"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZWB29Z91N"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
 
-      gtag('config', 'G-ZZWB29Z91N');
-    </script>
+            gtag('config', 'G-ZZWB29Z91N');
+        </script>
     </head>
 
 <body>
@@ -42,10 +42,15 @@
 
     <div class="container">
         <h2>About Me</h2>
-        <ul class="arch-ul about-ul">
-            <li>seigo2016</li>
-            <li>student</li>
-        </ul>
+        <div class="flex al-center">
+            <div class="m0">
+                <img height="120" loading="lazy" src="static/images/seigo2016-icon-up.png">
+            </div>
+            <ul class="arch-ul m0">
+                <li>seigo2016</li>
+                <li>Student of Tokyo Tech</li>
+            </ul>
+        </div>
         <h2 id="skill">My Skills</h2>
         <div class="skill">
             <div class="card">
@@ -184,6 +189,9 @@
                 <li>マスタリングTCP/IP入門編</li>
                 <li>コンピューターシステムの理論と実装</li>
                 <li>作って理解するOS</li>
+                <li>プログラムはなぜ動くのか</li>
+                <li>サーバー/インフラを支える技術</li>
+                <li>Webを支える技術</li>
 
             </ul>
         </div>
@@ -233,13 +241,14 @@
                 <div class="project-card-img"><img width="200" height="100" loading="lazy" src="static/images/contents_images/pdf_cc.webp"></div>
                 <div class="card-title">Image2PDF</div>
                 <div class="tag-list">
-                    <div class="tag">Node.js</div>
-                    <div class="tag">Electron</div>
-                    <div class="tag">HTML5</div>
-                    <div class="tag">CSS3</div>
+                    <div class="tag">TypeScript</div>
+                    <div class="tag">Python</div>
+                    <div class="tag">Fast API</div>
+                    <div class="tag">Cloudflare Pages</div>
                 </div>
                 <div class="card-text">
-                    写真を1つのPDFファイルに変換，結合するソフトウェア
+                    Webサイト上で複数の写真を1つのPDFファイルに結合し変換するWebアプリケーション
+                    <a href="https://img2pdf.seigo2016.com">アプリページ</a>
                 </div>
             </div>
             <div class="card">
@@ -335,6 +344,19 @@
                 <div class="card-text">
                     遠隔操作で殺虫剤を噴霧するロボット(?)。<br>
                     <a href="https://youtu.be/Zq57kEpYekE" target="_blank" rel="noopener noreferrer">デモ映像</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="project-card-img"><img width="200" height="100" loading="lazy" src="static/images/contents_images/pdf_cc.webp"></div>
+                <div class="card-title">Image2PDF(旧版)</div>
+                <div class="tag-list">
+                    <div class="tag">Node.js</div>
+                    <div class="tag">Electron</div>
+                    <div class="tag">HTML5</div>
+                    <div class="tag">CSS3</div>
+                </div>
+                <div class="card-text">
+                    写真を1つのPDFファイルに変換，結合するソフトウェア
                 </div>
             </div>
             <div class="card">
