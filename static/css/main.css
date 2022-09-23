@@ -2,11 +2,13 @@
   font-family: 'M PLUS Rounded 1c';
   font-weight: 400;
   src: url('../fonts/MPLUSRounded1c-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 @font-face {
   font-family: 'M PLUS Rounded 1c';
   font-weight: 500;
   src: url('../fonts/MPLUSRounded1c-Medium.ttf') format('truetype');
+  font-display: swap;
 }
 span {
   display: inline-block;

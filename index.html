@@ -12,9 +12,6 @@
         <meta property="og:url" content="https://seigo2016.com" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="seigo2016のポートフォリオ" />
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script defer src="https://www.googletagmanager.com/gtag/js?id=G-ZZWB29Z91N"></script>
-        <script defer src="static/js/gtag.js"></script>
     </head>
 
 <body>
@@ -401,6 +398,31 @@
 
         </div>
     </div>
+    <script>
+        function lazyLoadScript() {
+            let scrollFirstTime = true;
+            window.addEventListener("scroll", oneTimeFunction, false);
+            window.addEventListener("mousemove", oneTimeFunction, false);
+            function oneTimeFunction() {
+                if (scrollFirstTime === true) {
+                    console.log("test")
+                    scrollFirstTime = false;
+                    let adScript = document.createElement("script");
+                    adScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZZWB29Z91N';
+                    document.body.appendChild(adScript);
+                    let adScript2 = document.createElement("script");
+                    adScript2.innerHTML = "window.dataLayer = window.dataLayer || [];" +
+                        "function gtag() { dataLayer.push(arguments); }" +
+                        "gtag('js', new Date());" +
+                        "gtag('config', 'G-ZZWB29Z91N');"
+                    document.body.appendChild(adScript2);
+                    window.removeEventListener("scroll", oneTimeFunction, false);
+                    window.removeEventListener("mousemove", oneTimeFunction, false);
+                }
+            }
+        }
+        lazyLoadScript();
+    </script>
 </body>
 
 </html>
