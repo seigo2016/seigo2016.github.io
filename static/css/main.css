@@ -17,6 +17,7 @@ body {
   font-family: "M PLUS Rounded 1c";
   font-weight: 400;
   text-align: center;
+  transform: rotate(0.05deg);
 }
 .al-center{
   align-items: center;
