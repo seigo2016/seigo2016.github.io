@@ -171,6 +171,9 @@
                     「デジタルサイネージ with Raspberry Pi」</li>
                 <li>みんなのラズパイコンテスト2021 学生賞 <br>
                     「エニグマを再現！ 見た目にも凝った「EnigmaPi」」</li>
+                <li>東工大学生コンテスト ChatGPT を使い倒せ︕<br>
+                    第１弾：ChatGPT-4を用いたアプリ制作コンテスト <br>
+                    文字起こし結果の改善 技術賞</li>
             </ul>
             <ul class="arch-ul">
                 <h3>Other</h3>
@@ -405,23 +408,23 @@
     </div>
     <script>
         function lazyLoadScript() {
-            let scrollFirstTime = true;
-            window.addEventListener("scroll", oneTimeFunction, false);
-            window.addEventListener("mousemove", oneTimeFunction, false);
+            let scrollFirstTime = true
+            window.addEventListener("scroll", oneTimeFunction, false)
+            window.addEventListener("mousemove", oneTimeFunction, false)
             function oneTimeFunction() {
                 if (scrollFirstTime === true) {
-                    scrollFirstTime = false;
-                    let adScript = document.createElement("script");
-                    adScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZZWB29Z91N';
-                    document.body.appendChild(adScript);
-                    let adScript2 = document.createElement("script");
+                    scrollFirstTime = false
+                    let adScript = document.createElement("script")
+                    adScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZZWB29Z91N'
+                    document.body.appendChild(adScript)
+                    let adScript2 = document.createElement("script")
                     adScript2.innerHTML = "window.dataLayer = window.dataLayer || [];" +
                         "function gtag() { dataLayer.push(arguments); }" +
                         "gtag('js', new Date());" +
                         "gtag('config', 'G-ZZWB29Z91N');"
-                    document.body.appendChild(adScript2);
-                    window.removeEventListener("scroll", oneTimeFunction, false);
-                    window.removeEventListener("mousemove", oneTimeFunction, false);
+                    document.body.appendChild(adScript2)
+                    window.removeEventListener("scroll", oneTimeFunction, false)
+                    window.removeEventListener("mousemove", oneTimeFunction, false)
                 }
             }
         }
