@@ -2,7 +2,10 @@
   <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
-        <img src="static/images/seigo2016-icon-small.svg" class="h-8"/>
+        <div class="flex">
+          <img src="static/images/seigo2016-icon-small.svg" class="h-8"/>
+          <p>seigo2016</p>
+        </div>
       </a>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
@@ -14,11 +17,14 @@
     
   </nav>
   <div class="lg:hidden" role="dialog" aria-modal="true">
-    <div class="fixed inset-0 z-10"></div>
-    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+    <div class="fixed inset-0"></div>
+    <div class="fixed top-0 right-0 w-full overflow-y-auto bg-white px-6 py-6 lg:max-w-sm lg:ring-1 lg:ring-gray-900/10">
       <div class="flex items-center justify-between">
         <a href="#" class="-m-1.5 p-1.5">
-          <img src="static/images/seigo2016-icon-small.svg" class="h-8"/>
+          <div class="flex items-center">
+            <img src="static/images/seigo2016-icon-small.svg" class="h-8"/>
+            <p class="font-bold leading-6 ml-4 text-md">seigo2016.com</p>
+          </div>
         </a>
         <button id="menu-button" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
           <svg class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -48,6 +54,5 @@
         svg.classList.toggle('hidden');
       });
     });
-
   </script>
 </header>
