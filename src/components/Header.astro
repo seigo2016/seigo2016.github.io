@@ -13,6 +13,7 @@
       <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Skills</a>
       <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Achievements</a>
       <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Works</a>
+      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Articles</a>
     </div>
     
   </nav>
@@ -48,9 +49,9 @@
     </div>
   </div>
   <script>
-    document.getElementById('menu-button').addEventListener('click', function() {
-      document.getElementById('menu').classList.toggle('hidden');
-      document.getElementById('menu-button').querySelectorAll('svg').forEach(function(svg) {
+    document.getElementById('menu-button')?.addEventListener('click', function() {
+      document.getElementById('menu')?.classList.toggle('hidden');
+      document.getElementById('menu-button')?.querySelectorAll('svg').forEach(function(svg) {
         svg.classList.toggle('hidden');
       });
     });

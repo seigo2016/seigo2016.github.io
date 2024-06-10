@@ -76,7 +76,7 @@ const awards : AchievementsData[] = [
     <h2 class="text-3xl my-4">Awards</h2>
     <ul class="container flex flex-col jusitfy-center items-center">
       { awards.map(award => 
-          <div class="w-3/4 my-1">
+          <div class="w-full md:w-3/4 my-1">
             <li>
               <a href={award.url} target="_blank" rel="noopener noreferrer">
                 <div class="flex items-center p-3 text-base text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
@@ -97,7 +97,7 @@ const awards : AchievementsData[] = [
     <h2 class="text-3xl my-4">Certifications</h2>
     <ul class="container flex flex-col jusitfy-center items-center">
       { certs.map(cert => 
-          <div class="w-3/4 my-1">
+          <div class="w-full md:w-3/4 my-1">
             <li>
               <div class="flex items-center p-3 text-base text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
                 <span class="fa fa-certificate"></span>
