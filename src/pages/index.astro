@@ -2,15 +2,23 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Profile from '../components/Profile.astro';
+import Skills from '../components/Skills.astro';
+import Achievement from '../components/Achievements.astro';
 ---
 
 <Layout title="seigo2016 Portfolio">
-	<main class="w-full">
+	<main class="w-full container flex flex-col gap-4">
 		<div>
 			<Header />
 		</div>
 		<div>
 			<Profile />
+		</div>
+		<div>
+			<Skills />
+		</div>
+		<div>
+			<Achievement />
 		</div>
 	</main>
 </Layout>
