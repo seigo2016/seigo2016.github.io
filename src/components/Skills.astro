@@ -77,6 +77,10 @@ const skillAbstract : SkillAbstract[] = [
     name: 'Prisma',
     icon: 'prisma.svg'
   },
+  {
+    name: 'Raspberry Pi',
+    icon: 'raspberrypi.png'
+  }
 ]
 ---
 <div id="skills" class="container justify-center w-full flex flex-col items-center">
@@ -87,7 +91,7 @@ const skillAbstract : SkillAbstract[] = [
         { skills.map((skill) => 
           <div class="bg-white p-4 rounded-lg shadow-md">
             <div class="text-center justify-center flex flex-col">
-              <img src={`public/images/logo/${skill.icon}`} alt={skill.name} class="h-16 mx-auto">
+              <img src={`images/logo/${skill.icon}`} alt={skill.name} class="h-16 mx-auto">
               <h3 class="text-xl font-semibold mt-2">{ skill.name }</h3>
             </div>
             <p class="mt-4">{ skill.description }</p>
@@ -95,12 +99,12 @@ const skillAbstract : SkillAbstract[] = [
           )
         }
       </div>
-      <div class="grid lg:grid-cols-6 gap-2 mt-4 grid-cols-2">
+      <div class="grid lg:grid-cols-6 gap-2 mt-4 grid-cols-4">
         {
           skillAbstract.map((skill) => 
             <div class="bg-white p-2 rounded-lg shadow-md">
               <div class="text-center justify-center flex flex-col">
-                <img src={`public/images/logo/${skill.icon}`} alt={skill.name} class="h-8 mx-auto">
+                {/* <img src={`images/logo/${skill.icon}`} alt={skill.name} class="h-8 mx-auto"> */}
                 <h3 class="text-lg  mt-2">{ skill.name }</h3>
               </div>
             </div>
