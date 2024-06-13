@@ -1,0 +1,116 @@
+---
+export interface SkillData {
+  name: string;
+  description: string;
+  year: string;
+  icon: string;
+}
+
+export interface SkillAbstract {
+  name: string;
+  icon: string;
+}
+
+const skills: SkillData[] = [
+  {
+    name: 'Python',
+    description: 'APIなどのサーバー側の処理やスクレイピング,画像処理など幅広く使用. \
+    ちょっとしたツールやプロトタイプはとりあえずPythonで制作. ',
+    year: '8年以上',
+    icon: 'python.svg'
+  },
+  {
+    name:'Go',
+    description:'個人制作のデジタルサイネージv2やWebアプリのバックエンドや、株式会社NewBizzでのバックエンド開発でも利用',
+    year:'',
+    icon:'Go-Logo_Blue.svg'
+  },
+  {
+    name:'TypeScript',
+    description:'糸かけシミュレーターや2434units.comなどのWebアプリのフロントの開発に使用. Nest.JSやPrismaなどを用いたバックエンドの開発にも利用.',
+    year:' ',
+    icon:'ts-logo-256.svg'
+  },
+  {
+    name:'PHP',
+    description:'バックエンドの開発に利用. ',
+    year:'',
+    icon:'php-logo.png'
+  },
+  {
+    name:'docker',
+    description:'開発環境の構築やデプロイに利用',
+    year:'',
+    icon:'docker.webp'
+  },
+  {
+    name: 'AWS',
+    description: 'AWS CDKを用いて、ECS/Aurora Serverless/ECR/S3などを利用したインフラの構築や運用',
+    year: '',
+    icon: 'aws.svg'
+  },
+];
+
+const skillAbstract : SkillAbstract[] = [
+  
+{
+    name: 'Proxmox',
+    icon: 'proxmox.webp'
+  },
+  {
+    name: 'Nginx',
+    icon: 'nginx.png'
+  },
+  {
+    name: 'NestJS',
+    icon: 'nestjs.svg'
+  },
+  {
+    name: 'MariaDB',
+    icon: 'mariadb.svg'
+  },
+  {
+    name: 'PostgreSQL',
+    icon: 'postgresql.svg'
+  },
+  {
+    name: 'Prisma',
+    icon: 'prisma.svg'
+  },
+  {
+    name: 'Raspberry Pi',
+    icon: 'raspberrypi.png'
+  }
+]
+---
+<div id="skills" class="container justify-center w-full flex flex-col items-center">
+  <div class="w-full text-center">
+    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Skills</h2>
+    <div>
+      <div class="grid lg:grid-cols-3 gap-4 grid-cols-2">
+        { skills.map((skill) => 
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <div class="text-center justify-center flex flex-col">
+              <img src={`images/logo/${skill.icon}`} alt={skill.name} class="h-16 mx-auto">
+              <h3 class="text-xl font-semibold mt-2">{ skill.name }</h3>
+            </div>
+            <p class="mt-4">{ skill.description }</p>
+          </div>
+          )
+        }
+      </div>
+      <div class="grid lg:grid-cols-6 gap-2 mt-4 grid-cols-4">
+        {
+          skillAbstract.map((skill) => 
+            <div class="bg-white p-2 rounded-lg shadow-md">
+              <div class="text-center justify-center flex flex-col">
+                {/* <img src={`images/logo/${skill.icon}`} alt={skill.name} class="h-8 mx-auto"> */}
+                <h3 class="text-lg  mt-2">{ skill.name }</h3>
+              </div>
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</div>

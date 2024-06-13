@@ -1,0 +1,72 @@
+---
+import { JSDOM } from 'jsdom';
+import fetch from 'node-fetch';
+
+export interface OgpData {
+  'og:title': string;
+  'og:description': string | null;
+  'og:url': string;
+  'og:image': string | null;
+}
+
+const urls = [
+  "https://qiita.com/seigo2016/items/b91a0ef8364816371de3",
+  "https://blog.seigo2016.com/blog/u-h63m00yhm9",
+  "https://blog.seigo2016.com/blog/h-blxsnew_s",
+  "https://blog.seigo2016.com/blog/a57ec43eo",
+  "https://blog.seigo2016.com/blog/skdw6qd0mzq",
+  "https://blog.seigo2016.com/blog/knmg7l0u_3f"
+];
+
+async function getOgp() { 
+  const ogps: OgpData[] = [];
+  for (const url of urls) {
+    const res = await fetch(url);
+    const html = await res.text();
+    const dom = new JSDOM(html);
+    const meta = dom.window.document.querySelectorAll('meta[property^="og:"]');
+    const ogp: OgpData = {
+      'og:title': '',
+      'og:description': '',
+      'og:url': '',
+      'og:image': ''
+    };
+    meta.forEach((el) => {
+      const property = el.getAttribute('property');
+      const content = el.getAttribute('content');
+      if (property === 'og:title') {
+        ogp['og:title'] = content || '';
+      } else if (property === 'og:description') {
+        ogp['og:description'] = content;
+      } else if (property === 'og:url') {
+        ogp['og:url'] = url;
+      } else if (property === 'og:image') {
+        ogp['og:image'] = `${content}`;
+      }
+    });
+    ogps.push(ogp);
+  };
+  return ogps;
+};
+const ogps = await getOgp();
+---
+
+<div id="articles" class="container justify-center w-full flex flex-col items-center">
+  <div class="w-full text-center">
+    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Articles</h2>
+    <div>
+      <div class="grid lg:grid-cols-3 gap-4 grid-cols-2">
+        { ogps.map((ogp) => 
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <div class="text-center justify-center flex flex-col">
+              <img src={ogp['og:image']} class="h-24 mx-auto">
+              <h3 class="text-md font-semibold mt-2">{ ogp['og:title'] }</h3>
+            </div>
+            <p class="mt-4 text-sm">{ ogp['og:description'] }</p>
+          </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</div>

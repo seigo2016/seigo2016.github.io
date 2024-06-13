@@ -1,0 +1,109 @@
+---
+
+export interface AchievementsData {
+  title: string;
+  year?: string;
+  description?: string;
+  url?: string;
+}
+
+const certs : AchievementsData[] = [
+  {
+    title: '日本漢字能力検定2級'
+  },
+  {
+    title: '実用英語技能検定2級'
+  },
+  {
+    title: '情報検定 情報活用試験1級'
+  },
+  {
+    title: '情報検定情報システム試験 基本スキル・プログラミングスキル プログラマ認定'
+  },
+  {
+    title: 'ITパスポート試験'
+  },
+  {
+    title: '基本情報技術者試験'
+  },
+  {
+    title: '応用情報技術者試験'
+  },
+  {
+    title: '情報処理安全確保支援士試験'
+  }
+]
+
+const awards : AchievementsData[] = [
+  {
+    title: 'たのしいmicro:bitコンテスト2019 特別賞',
+    description: '「殺虫剤遠隔噴霧車」',
+    url: 'https://makezine.jp/blog/2019/08/microbitcontest2019_mft.html'
+  },
+  {
+    title: 'U22プログラミングコンテスト2019 入賞・日本事務器賞',
+    description: '「糸かけ曼荼羅色シミュレーター」',
+    url: 'https://u22procon.com/2019/report/comment.html#_085'
+  },
+  {
+    title: 'みんなのラズパイコンテスト2019 RaspberryPi財団賞',
+    description: '「デジタルサイネージ with Raspberry Pi」',
+    url: 'https://project.nikkeibp.co.jp/pc/rpic/rpic19.html'
+  },
+  {
+    title: 'みんなのラズパイコンテスト2021 学生賞',
+    description: '「エニグマを再現！ 見た目にも凝った「EnigmaPi」」',
+    url: 'https://project.nikkeibp.co.jp/pc/rpic/rpic21.html'
+  },
+  {
+    title: '東工大学生コンテスト ChatGPT を使い倒せ! 第１弾：ChatGPT-4を用いたアプリ制作コンテスト',
+    description: '文字起こし結果の改善 技術賞 (チーム:pyてょん3.0)'
+  },
+  {
+    title: 'デジタル庁 法令APIハッカソン',
+    description: 'ビジネス・法務賞 (チーム:pyてょん3.0)',
+    url: 'https://www.digital.go.jp/policies/legal-practice/hackathon'
+  }
+]
+
+---
+
+<div id="achievements" class="w-full flex lg:flex-row flex-col">
+  <div class="basis-1/2 text-center">
+    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Awards</h2>
+    <ul class="container flex flex-col jusitfy-center items-center">
+      { awards.map(award => 
+          <div class="w-full md:w-3/4 my-1">
+            <li>
+              <a href={award.url} target="_blank" rel="noopener noreferrer">
+                <div class="flex items-center p-3 text-base text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                  <span class="fa fa-award"></span>
+                  <div class="flex flex-col">
+                    <span class="ms-3 text-left">{award.title}</span>
+                    <span class="ms-3 text-left text-sm">{award.description}</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </div>
+        )
+      }
+    </ul>
+  </div>
+  <div class="basis-1/2 text-center">
+    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Certifications</h2>
+    <ul class="container flex flex-col jusitfy-center items-center">
+      { certs.map(cert => 
+          <div class="w-full md:w-3/4 my-1">
+            <li>
+              <div class="flex items-center p-3 text-base text-gray-900 rounded-lg bg-gray-50  group dark:bg-gray-600">
+                <span class="fa fa-certificate"></span>
+                <span class="ms-3 text-left break-words">{cert.title}</span>
+              </div>
+            </li>
+          </div>
+        )
+      }
+    </ul>
+  </div>
+</div>

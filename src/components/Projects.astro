@@ -1,0 +1,197 @@
+---
+export interface ProjectData {
+  name: string;
+  description: string;
+  image: string;
+  url: {
+    name: string;
+    url: string;
+  }[];
+  tags: string[];
+}
+
+const projects: ProjectData[] = [
+  {
+    name: "糸かけシミュレーター",
+    description: "糸かけ曼荼羅の制作を支援するソフトウェア。配色や形状の細かなシミュレーションが可能。",
+    image: "itokake.webp",
+    url: [
+      { name: "Webアプリ", url: "https://itokake.seigo2016.com" }
+    ],
+    tags: ["TypeScript", "HTML5", "CSS3", "Cloudflare Pages", "PWA"]
+  },
+  {
+    name: "Digital Sigange v3",
+    description: "Raspberry PiとDropbox/Google Driveを使用して，掲示板をデジタル化したデジタルサイネージ。",
+    image: "digital-signage.webp",
+    url: [],
+    tags: ["Python", "Raspberry Pi", "Dropbox API"]
+  },
+  {
+    name: "試薬一括検索サイト",
+    description: "複数の試薬販売メーカーのサイトから目的の試薬を一括で検索できるサイト",
+    image: "reagent.webp",
+    url: [],
+    tags: ["Python", "Selenium", "HTML5", "CSS3"]
+  },
+  {
+    name: "Image2PDF",
+    description: "Webサイト上で複数の写真を1つのPDFファイルに結合し変換するWebアプリケーション",
+    image: "img2pdf.webp",
+    url: [
+      { name: "Webアプリ", url: "https://img2pdf.seigo2016.com" }
+    ],
+    tags: ["TypeScript", "Python", "Fast API", "Cloudflare Pages"]
+  },
+  {
+    name: "EnigmaPi",
+    description: "暗号機エニグマをRaspberry Piを使用して，再現したもの",
+    image: "enigma.webp",
+    url: [
+      {
+        name: "スライド",
+        url: "https://www.slideshare.net/seigo2016/raspberry-pi-x-enigma/1"
+      },
+      {
+        name: "動画",
+        url: "https://youtu.be/QfIU4Iw-8Hs"
+      }
+    ],
+    tags: ["Python", "Raspberry Pi Zero WH"]
+  },
+  {
+    name: "EnigmaPi v2",
+    description: "EnigmaPi v2",
+    image: "EnigmaPi-v2.webp",
+    url: [
+      {
+        name: "Make: Faire Tokyo 2022",
+        url: "https://makezine.jp/event/makers-mft2022/m0043/"
+      }
+    ],
+    tags: ["Python", "Raspberry Pi Pico"]
+  },
+  {
+    name: "スマートロック with Raspberry Pi",
+    description: "既存のドアの鍵の開け閉めをスマートフォンから操作できる「スマートロック」にするシステム。",
+    image: "smartlock.webp",
+    url: [
+      {
+      name: "動画",
+      url: "https://youtu.be/BHFAZTuZBGE"
+      }
+    ],
+    tags: ["Python", "Raspberry Pi"]
+  },
+  {
+    name: "2434Units.com",
+    description: "VTuberグループにじさんじのユニットの最新情報を提供するサイト",
+    image: "2434units.webp",
+    url: [
+      {
+        name: "Webサイト",
+        url: "https://2434units.com",
+      }
+    ],
+    tags: ["TypeScript", "Vue.js", "Python (FastAPI)", "MariaDB", "Cloudflare Pages", "Twitter API v2", "YouTube API"]
+  },
+  {
+    name: "スタレック | Study Record",
+    description: "シンプルな勉強記録アプリ",
+    image: "StudyRecord.webp",
+    url: [],
+    tags: ["React Native"]
+  },
+  {
+    name: "Presentation Support System",
+    description: "プレゼンテーションを更に面白く，便利に行うためのツール。スライド上にリアルタイムでコメントを流すシステムを実装。",
+    image: "pss-min.webp",
+    url: [],
+    tags: ["Python", "Electron"]
+  },
+  {
+    name: "PS2JPC-BOT",
+    description: "PCゲーム PlanetSide2の非公式JPコミュニティで2017年より運用中の管理Bot。役職管理やゲーム内イベント告知，サーバー管理等の機能を実装。",
+    image: "ps2jpcbot.webp",
+    url: [],
+    tags: ["Python (v1.0 / v3.0)", "Go (v2.0)"]
+  },
+  {
+    name: "戦車プラモデルのラジコン化",
+    description: "タミヤの1/35戦車プラモデルにRaspberryPi zero WHを搭載。Xboxコントローラーで操作できる。砲塔の旋回も可能。",
+    image: "tank-min.webp",
+    url: [
+      {
+        name: "動画",
+        url: "https://youtu.be/zETG8R2qTDw"
+      }
+    ],
+    tags: ["Python", "Raspberry Pi"]
+  },
+  {
+    name: "球体ロボット",
+    description: "プラスチック球の中にRaspberryPi zero WHなどを搭載した，Xboxコントローラーで操作できる球体ロボット。Xboxコントローラーで操作可能。",
+    image: "sphere-min.webp",
+    url: [
+      {
+        name: "動画",
+        url: "https://youtu.be/9oHtzbt6FJ4"
+      }
+    ],
+    tags: ["Python", "Raspberry Pi"]
+  },
+  {
+    name: "殺虫剤遠隔噴霧車",
+    description: "遠隔操作で殺虫剤を噴霧するロボット(?)。",
+    image: "spray.webp",
+    url: [
+      {
+        name: "動画",
+        url: "https://youtu.be/Zq57kEpYekE"
+      }
+    ],
+    tags: ["micro:bit"]
+  },
+  {
+    name: "BFV LeadrerBoard",
+    description: "FPSゲームBFVのAPIから情報を取得し，いくつかの情報をピックアップして表示するサイト。",
+    image: "preview.webp",
+    url: [],
+    tags: ["Vue.js"]
+  }
+];
+---
+
+<div id="projects" class="w-full flex lg:flex-row flex-col">
+  <div class="w-full text-center">
+    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Projecs</h2>
+    <div class="grid lg:grid-cols-3 gap-4 grid-cols-2">
+      {  
+        projects.map(project => 
+          <div class="items-center p-3 text-base text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+            <img src={`images/contents_images/${project.image}`} alt={project.name} class="h-32 rounded-lg my-2 block m-auto" />
+            <h3 class="text-lg font-bold">{project.name}</h3>
+            <div class="text-sm flex flex-row flex-wrap justify-center my-1">{
+              project.tags.map(tag => 
+              <span class="text-xs bg-gray-200 dark:bg-gray-700 dark:text-white rounded-full px-2 mx-1">{tag}</span>
+            )
+            }</div>
+            <div class="flex flex-col">
+              <div class="flex-grow">
+                <p class="text-sm">{ project.description }</p>
+              </div>
+              <div class="">
+                {
+                  project.url.map(url =>
+                    <a href={url.url
+                      } class="text-blue-600 dark:text-blue-400 hover:underline mx-2" target="_blank" rel="noopener noreferrer">{url.name}</a>
+                  )
+                }
+              </div>
+            </div>
+          </div>
+        )
+      }
+    </div>
+  </div>
+</div>
