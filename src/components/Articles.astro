@@ -58,11 +58,13 @@ const ogps = await getOgp();
       <div class="grid lg:grid-cols-3 gap-4 md:grid-cols-2 grid-cols-1">
         { ogps.map((ogp) => 
           <div class="bg-white p-4 rounded-lg shadow-md">
+          <a href={ogp['og:url']} class="hover:shadow-lg" target="_blank" rel="noopener noreferrer">
             <div class="text-center justify-center flex flex-col">
               <img src={ogp['og:image']} class="h-24 mx-auto">
               <h3 class="text-md font-semibold mt-2">{ ogp['og:title'] }</h3>
             </div>
             <p class="mt-4 text-sm wrap-normal">{ ogp['og:description'] }</p>
+          </a>
           </div>
           )
         }
