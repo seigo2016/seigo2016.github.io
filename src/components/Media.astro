@@ -1,0 +1,144 @@
+---
+import { JSDOM } from 'jsdom';
+import fetch from 'node-fetch';
+
+export interface MediaOgpData {
+  'og:title': string;
+  'og:description': string | null;
+  'og:url': string;
+  'og:image': string | null;
+}
+
+export interface MediaItem {
+  url: string;
+  date: string;
+  type: 'interview' | 'article' | 'podcast' | 'video';
+  image?: string;
+}
+
+const mediaItems: MediaItem[] = [
+  {
+    url: "https://note.com/fastdoctor/n/n59b1e8e8a61e",
+    date: "2025-06-02",
+    type: "interview"
+  },
+  {
+    url: "https://www.titech.ac.jp/news/2024/068218",
+    date: "2024-02-05",
+    type: "article"
+  },
+  {
+    url: "https://prokids.jp/article/intern_report_kawachi2",
+    date: "2022-04-13",
+    type: "interview"
+  },
+  {
+    url: "https://prokids.jp/article/intern_report_kawachi",
+    date: "2019-12-23",
+    type: "interview",
+    image: "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_768/https://prokids.jp/wp-content/uploads/2019/12/interview_kawachi23-768x578.jpg"
+  },
+];
+
+async function getOgp() { 
+  const ogps: (MediaOgpData & { date: string; type: string })[] = [];
+  for (const item of mediaItems) {
+    try {
+      const res = await fetch(item.url);
+      const html = await res.text();
+      const dom = new JSDOM(html);
+      const meta = dom.window.document.querySelectorAll('meta[property^="og:"]');
+      const ogp: MediaOgpData = {
+        'og:title': '',
+        'og:description': '',
+        'og:url': '',
+        'og:image': ''
+      };
+      meta.forEach((el) => {
+        const property = el.getAttribute('property');
+        const content = el.getAttribute('content');
+        if (property === 'og:title') {
+          ogp['og:title'] = content || '';
+        } else if (property === 'og:description') {
+          ogp['og:description'] = content;
+        } else if (property === 'og:url') {
+          ogp['og:url'] = item.url;
+        } else if (property === 'og:image') {
+          ogp['og:image'] = `${content}`;
+        }
+      });
+      // MediaItemに画像が指定されている場合は優先
+      const finalImage = item.image || ogp['og:image'] || '/images/logo/seigo2016-icon-small.webp';
+      ogps.push({
+        ...ogp,
+        'og:image': finalImage,
+        date: item.date,
+        type: item.type
+      });
+    } catch (error) {
+      // フォールバック: OGP取得に失敗した場合
+      const fallbackImage = item.image || '/images/logo/seigo2016-icon-small.webp';
+      ogps.push({
+        'og:title': 'メディア掲載',
+        'og:description': 'メディア掲載情報',
+        'og:url': item.url,
+        'og:image': fallbackImage,
+        date: item.date,
+        type: item.type
+      });
+    }
+  };
+  return ogps;
+};
+
+function getTypeLabel(type: string): string {
+  switch (type) {
+    case 'interview':
+      return 'インタビュー';
+    case 'article':
+      return '記事';
+    case 'podcast':
+      return 'ポッドキャスト';
+    case 'video':
+      return '動画';
+    default:
+      return '記事';
+  }
+}
+
+function truncateDescription(description: string | null, maxLength: number = 100): string {
+  if (!description) return '';
+  if (description.length <= maxLength) return description;
+  return description.substring(0, maxLength) + '...';
+}
+
+const ogps = await getOgp();
+---
+
+<div id="media" class="container justify-center w-full flex flex-col items-center">
+  <div class="w-full text-center">
+    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Media</h2>
+    <div>
+      <div class="grid lg:grid-cols-3 gap-4 md:grid-cols-2 grid-cols-1">
+        { ogps.map((ogp) => 
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <a href={ogp['og:url']} class="hover:shadow-lg" target="_blank" rel="noopener noreferrer">
+              <div class="text-center justify-center flex flex-col">
+                <img src={ogp['og:image']} class="h-24 mx-auto" alt={ogp['og:title']}>
+                <div class="flex items-center justify-center mt-2 mb-1">
+                  <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full mr-2">
+                    {getTypeLabel(ogp.type)}
+                  </span>
+                  <span class="text-xs text-gray-500">{ogp.date}</span>
+                </div>
+                <h3 class="text-md font-semibold mt-1">{ ogp['og:title'] }</h3>
+              </div>
+              <p class="mt-4 text-sm wrap-normal">{ truncateDescription(ogp['og:description']) }</p>
+            </a>
+          </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</div>
