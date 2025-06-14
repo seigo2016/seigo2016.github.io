@@ -1,44 +1,7 @@
 ---
-import { JSDOM } from 'jsdom';
 import fetch from 'node-fetch';
-
-export interface MediaOgpData {
-  'og:title': string;
-  'og:description': string | null;
-  'og:url': string;
-  'og:image': string | null;
-}
-
-export interface MediaItem {
-  url: string;
-  date: string;
-  type: 'interview' | 'article' | 'podcast' | 'video';
-  image?: string;
-}
-
-const mediaItems: MediaItem[] = [
-  {
-    url: "https://note.com/fastdoctor/n/n59b1e8e8a61e",
-    date: "2025-06-02",
-    type: "interview"
-  },
-  {
-    url: "https://www.titech.ac.jp/news/2024/068218",
-    date: "2024-02-05",
-    type: "article"
-  },
-  {
-    url: "https://prokids.jp/article/intern_report_kawachi2",
-    date: "2022-04-13",
-    type: "interview"
-  },
-  {
-    url: "https://prokids.jp/article/intern_report_kawachi",
-    date: "2019-12-23",
-    type: "interview",
-    image: "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_768/https://prokids.jp/wp-content/uploads/2019/12/interview_kawachi23-768x578.jpg"
-  },
-];
+import type { MediaOgpData } from '../types';
+import { mediaItems } from '../data/media';
 
 async function getOgp() { 
   const ogps: (MediaOgpData & { date: string; type: string })[] = [];
@@ -46,27 +9,17 @@ async function getOgp() {
     try {
       const res = await fetch(item.url);
       const html = await res.text();
-      const dom = new JSDOM(html);
-      const meta = dom.window.document.querySelectorAll('meta[property^="og:"]');
+
+      const ogTitleMatch = html.match(/<meta[^>]*property=["']og:title["'][^>]*content=["']([^"']*?)["'][^>]*>/i);
+      const ogDescMatch = html.match(/<meta[^>]*property=["']og:description["'][^>]*content=["']([^"']*?)["'][^>]*>/i);
+      const ogImageMatch = html.match(/<meta[^>]*property=["']og:image["'][^>]*content=["']([^"']*?)["'][^>]*>/i);
+      
       const ogp: MediaOgpData = {
-        'og:title': '',
-        'og:description': '',
-        'og:url': '',
-        'og:image': ''
+        'og:title': ogTitleMatch?.[1] || 'メディア掲載',
+        'og:description': ogDescMatch?.[1] || null,
+        'og:url': item.url,
+        'og:image': ogImageMatch?.[1] || null
       };
-      meta.forEach((el) => {
-        const property = el.getAttribute('property');
-        const content = el.getAttribute('content');
-        if (property === 'og:title') {
-          ogp['og:title'] = content || '';
-        } else if (property === 'og:description') {
-          ogp['og:description'] = content;
-        } else if (property === 'og:url') {
-          ogp['og:url'] = item.url;
-        } else if (property === 'og:image') {
-          ogp['og:image'] = `${content}`;
-        }
-      });
       // MediaItemに画像が指定されている場合は優先
       const finalImage = item.image || ogp['og:image'] || '/images/logo/seigo2016-icon-small.webp';
       ogps.push({
