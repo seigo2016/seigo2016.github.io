@@ -13,8 +13,8 @@ async function getOgp() {
       const ogDescMatch = html.match(/<meta[^>]*property=["']og:description["'][^>]*content=["']([^"']*?)["'][^>]*>/i);
       const ogImageMatch = html.match(/<meta[^>]*property=["']og:image["'][^>]*content=["']([^"']*?)["'][^>]*>/i);
       const ogp: OgpData = {
-        'og:title': ogTitleMatch?.[1] || 'Article',
-        'og:description': ogDescMatch?.[1] || null,
+        'og:title': ogTitleMatch?.[1]?.replace(/&quot;/g, '"').replace(/&amp;/g, '&') || 'Article',
+        'og:description': ogDescMatch?.[1]?.replace(/&quot;/g, '"').replace(/&amp;/g, '&') || null,
         'og:url': url,
         'og:image': ogImageMatch?.[1] || null
       };
