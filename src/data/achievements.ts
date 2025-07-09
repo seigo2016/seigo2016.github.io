@@ -24,6 +24,9 @@ export const certs: AchievementsData[] = [
   },
   {
     title: '情報処理安全確保支援士試験'
+  },
+  {
+    title: 'ネットワークスペシャリスト試験'
   }
 ];
 
