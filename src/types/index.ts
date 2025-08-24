@@ -7,6 +7,7 @@ export interface ProjectData {
     url: string;
   }[];
   tags: string[];
+  featured?: boolean;
 }
 
 export interface DateRange {

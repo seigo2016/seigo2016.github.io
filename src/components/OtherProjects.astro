@@ -1,14 +1,14 @@
 ---
 import { projects } from '../data/projects';
 
-const featuredProjects = projects.filter(project => project.featured);
+const otherProjects = projects.filter(project => !project.featured);
 ---
 
-<div id="projects" class="w-full flex lg:flex-row flex-col">
+<div id="other-projects" class="w-full flex lg:flex-row flex-col">
   <div class="w-full text-center">
-    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Projects</h2>
+    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">その他のプロジェクト</h2>
     <div class="grid lg:grid-cols-3 gap-4 grid-cols-1 md:grid-cols-2">
-      {featuredProjects.map(project => 
+      {otherProjects.map(project => 
         <div class="items-center p-3 text-base text-gray-900 rounded-lg bg-gray-50 group  dark:bg-gray-600 dark:text-white">
           <img src={`images/contents_images/${project.image}`} alt={project.name} class="h-32 rounded-lg my-2 block m-auto" />
           <h3 class="text-lg font-bold">{project.name}</h3>

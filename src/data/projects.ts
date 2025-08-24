@@ -8,7 +8,8 @@ export const projects: ProjectData[] = [
     url: [
       { name: "Webアプリ", url: "https://itokake.seigo2016.com" }
     ],
-    tags: ["TypeScript", "HTML5", "CSS3", "Cloudflare Pages", "PWA"]
+    tags: ["TypeScript", "HTML5", "CSS3", "Cloudflare Pages", "PWA"],
+    featured: true
   },
   {
     name: "Digital Sigange v3",
@@ -31,7 +32,8 @@ export const projects: ProjectData[] = [
     url: [
       { name: "Webアプリ", url: "https://img2pdf.seigo2016.com" }
     ],
-    tags: ["TypeScript", "Python", "Fast API", "Cloudflare Pages"]
+    tags: ["TypeScript", "Python", "Fast API", "Cloudflare Pages"],
+    featured: false
   },
   {
     name: "EnigmaPi",
@@ -59,7 +61,8 @@ export const projects: ProjectData[] = [
         url: "https://makezine.jp/event/makers-mft2022/m0043/"
       }
     ],
-    tags: ["Python", "Raspberry Pi Pico"]
+    tags: ["Python", "Raspberry Pi Pico"],
+    featured: true
   },
   {
     name: "スマートロック with Raspberry Pi",
@@ -143,5 +146,18 @@ export const projects: ProjectData[] = [
   //   image: "preview.webp",
   //   url: [],
   //   tags: ["Vue.js"]
+  // }
+  // {
+  //   name: "自宅サーバー環境",
+  //   description: "自宅にあるサーバー。Proxmoxで仮想化後、k8sクラスタを構築。Terraform + AnsibleでIaC、GitOpsを実践。",
+  //   image: "server.webp",
+  //   url: [
+  //     {
+  //     name: "GitHub",
+  //     url: "https://github.com/seigo2016/infra",
+  //     }
+  //   ],
+  //   tags: ["Proxmox", "Kubernetes", "GitOps", "Terraform", "Ansible"],
+  //   featured: true
   // }
 ];
