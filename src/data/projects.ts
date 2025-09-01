@@ -8,7 +8,7 @@ export const projects: ProjectData[] = [
     url: [
       { name: "Webアプリ", url: "https://itokake.seigo2016.com" }
     ],
-    tags: ["TypeScript", "HTML5", "CSS3", "Cloudflare Pages", "PWA"],
+    tags: ["TypeScript", "Cloudflare Pages", "PWA"],
     featured: true
   },
   {
@@ -106,7 +106,7 @@ export const projects: ProjectData[] = [
   },
   {
     name: "戦車プラモデルのラジコン化",
-    description: "タミヤの1/35戦車プラモデルにRaspberryPi zero WHを搭載。Xboxコントローラーで操作できる。砲塔の旋回も可能。",
+    description: "タミヤの1/35戦車プラモデルにRaspberryPi Zero WHを搭載。Xboxコントローラーで操作できる。砲塔の旋回も可能。",
     image: "tank-min.webp",
     url: [
       {
@@ -118,7 +118,7 @@ export const projects: ProjectData[] = [
   },
   {
     name: "球体ロボット",
-    description: "プラスチック球の中にRaspberryPi zero WHなどを搭載した，Xboxコントローラーで操作できる球体ロボット。Xboxコントローラーで操作可能。",
+    description: "プラスチック球の中にRaspberryPi Zero WHなどを搭載した，Xboxコントローラーで操作できる球体ロボット。Xboxコントローラーで操作可能。",
     image: "sphere-min.webp",
     url: [
       {
@@ -147,17 +147,17 @@ export const projects: ProjectData[] = [
   //   url: [],
   //   tags: ["Vue.js"]
   // }
-  // {
-  //   name: "自宅サーバー環境",
-  //   description: "自宅にあるサーバー。Proxmoxで仮想化後、k8sクラスタを構築。Terraform + AnsibleでIaC、GitOpsを実践。",
-  //   image: "server.webp",
-  //   url: [
-  //     {
-  //     name: "GitHub",
-  //     url: "https://github.com/seigo2016/infra",
-  //     }
-  //   ],
-  //   tags: ["Proxmox", "Kubernetes", "GitOps", "Terraform", "Ansible"],
-  //   featured: true
-  // }
+  {
+    name: "自宅サーバー環境",
+    description: "自宅にあるサーバー。Proxmoxで仮想化後、k8sクラスタを構築。Terraform + AnsibleでIaC、GitOpsを実践。",
+    image: "server.webp",
+    url: [
+      {
+      name: "GitHub",
+      url: "https://github.com/seigo2016/infra",
+      }
+    ],
+    tags: ["Proxmox", "Kubernetes", "GitOps", "Terraform", "Ansible"],
+    featured: true
+  }
 ];
