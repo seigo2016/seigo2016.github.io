@@ -16,7 +16,7 @@ export const skills: SkillData[] = [
   },
   {
     name:'TypeScript',
-    description:'糸かけシミュレーターや2434units.comなどのWebアプリのフロントの開発に使用. Nest.JSやPrismaなどを用いたバックエンドの開発にも利用.',
+    description:'糸かけシミュレーターや2434units.comなどのWebアプリのフロントの開発に使用. NestJSやPrismaなどを用いたバックエンドの開発にも利用.',
     year:' ',
     icon:'ts-logo-256.svg'
   },
