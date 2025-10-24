@@ -56,7 +56,7 @@ export const otherWorks: WorksData[] = [
     ],
   },
   {
-    companyName: "株式会社Recruit (就業型インターン)",
+    companyName: "株式会社リクルート RED TEAM(就業型インターン)",
     dateRanges: [
       { since: new Date("2024-10-03"), until: new Date("2022-11-01") },
     ],
