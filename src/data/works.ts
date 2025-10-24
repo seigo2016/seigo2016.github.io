@@ -51,14 +51,14 @@ export const otherWorks: WorksData[] = [
   {
     companyName: "Sansan株式会社 (就業型インターン)",
     dateRanges: [
-      { since: new Date("2022-09-16"), until: new Date("2022-09-27") },
-      { since: new Date("2022-02-13"), until: new Date("2022-03-28") },
+      { since: new Date("2024-09-16"), until: new Date("2024-09-27") },
+      { since: new Date("2025-02-13"), until: new Date("2025-03-28") },
     ],
   },
   {
     companyName: "株式会社リクルート RED TEAM(就業型インターン)",
     dateRanges: [
-      { since: new Date("2024-10-03"), until: new Date("2022-11-01") },
+      { since: new Date("2024-10-03"), until: new Date("2024-11-01") },
     ],
   },
   {
