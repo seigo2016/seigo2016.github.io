@@ -1,30 +1,32 @@
 ---
 import fetch from 'node-fetch';
 import type { OgpData } from '../types';
-import { articleUrls } from '../data/articles';
+import { articles } from '../data/articles';
 
-async function getOgp() { 
+async function getOgp() {
   const ogps: OgpData[] = [];
-  for (const url of articleUrls) {
+  for (const article of articles) {
+    // OGPを取得
     try {
-      const res = await fetch(url);
+      const res = await fetch(article.url);
       const html = await res.text();
       const ogTitleMatch = html.match(/<meta[^>]*property=["']og:title["'][^>]*content=["']([^"']*?)["'][^>]*>/i);
       const ogDescMatch = html.match(/<meta[^>]*property=["']og:description["'][^>]*content=["']([^"']*?)["'][^>]*>/i);
       const ogImageMatch = html.match(/<meta[^>]*property=["']og:image["'][^>]*content=["']([^"']*?)["'][^>]*>/i);
+
       const ogp: OgpData = {
-        'og:title': ogTitleMatch?.[1]?.replace(/&quot;/g, '"').replace(/&amp;/g, '&') || 'Article',
-        'og:description': ogDescMatch?.[1]?.replace(/&quot;/g, '"').replace(/&amp;/g, '&') || null,
-        'og:url': url,
-        'og:image': ogImageMatch?.[1] || null
+        'og:title': article.title || ogTitleMatch?.[1]?.replace(/&quot;/g, '"').replace(/&amp;/g, '&') || 'Article',
+        'og:description': article.description || ogDescMatch?.[1]?.replace(/&quot;/g, '"').replace(/&amp;/g, '&') || null,
+        'og:url': article.url,
+        'og:image': article.image || ogImageMatch?.[1] || null
       };
       ogps.push(ogp);
     } catch (error) {
       ogps.push({
-        'og:title': 'Article',
-        'og:description': 'External article',
-        'og:url': url,
-        'og:image': null
+        'og:title': article.title || 'Article',
+        'og:description': article.description || 'External article',
+        'og:url': article.url,
+        'og:image': article.image || null
       });
     }
   };
@@ -33,7 +35,7 @@ async function getOgp() {
 const ogps = await getOgp();
 ---
 
-<div id="articles" class="container justify-center w-full flex flex-col items-center">
+<div id="articles" class="w-full px-4 md:px-8 lg:px-16 flex flex-col items-center">
   <div class="w-full text-center">
     <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Articles</h2>
     <div>

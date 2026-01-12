@@ -12,33 +12,33 @@ const experience = [
 ];
 ---
 
-<div id="hero" class="container justify-center w-full flex flex-col items-center my-8">
+<div id="hero" class="w-full px-4 md:px-8 lg:px-16 flex flex-col items-center my-8">
   <div class="w-full text-center mb-6">
-    <div class="flex items-center justify-center gap-4 mb-6">
-      <img src="images/seigo2016-icon-small.svg" alt="seigo2016" class="h-24 w-24 rounded-full" />
+    <div class="flex items-center justify-center gap-6 mb-6">
+      <img src="images/seigo2016-icon-small.svg" alt="seigo2016" class="h-32 w-32 md:h-40 md:w-40 rounded-full" />
       <div class="text-left">
-        <div class="text-base text-gray-600">seigo2016</div>
-        <div class="text-2xl font-semibold text-gray-900">Seigo Kawachi</div>
+        <div class="text-lg md:text-xl text-gray-600">seigo2016</div>
+        <div class="text-3xl md:text-4xl font-semibold text-gray-900">Seigo Kawachi</div>
       </div>
     </div>
     <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-2">{title}</h1>
   </div>
 
-  <div class="w-full grid md:grid-cols-2 gap-6 mb-8">
-    <div class="text-left">
+  <div class="w-full grid md:grid-cols-2 gap-6 mb-8 max-w-4xl">
+    <div class="text-center">
       <h3 class="text-xl font-bold text-gray-900 mb-3 pb-2 border-b-2 border-gray-300">技術領域</h3>
       <ul class="space-y-2">
         {skills.map(skill => (
-          <li class="text-sm text-gray-700">• {skill}</li>
+          <li class="text-sm text-gray-700">{skill}</li>
         ))}
       </ul>
     </div>
 
-    <div class="text-left">
+    <div class="text-center">
       <h3 class="text-xl font-bold text-gray-900 mb-3 pb-2 border-b-2 border-gray-300">実務経験</h3>
       <ul class="space-y-2">
         {experience.map(exp => (
-          <li class="text-sm text-gray-700">• {exp}</li>
+          <li class="text-sm text-gray-700">{exp}</li>
         ))}
       </ul>
     </div>

@@ -17,7 +17,7 @@ export const projects: ProjectData[] = [
     challenge: "本番環境相当のインフラ技術習得、IaCによる再現可能な環境構築、GitOpsによる宣言的な運用の実現",
     role: "個人開発(インフラ設計・構築・運用すべて)",
     architecture: "Proxmox VE上にKubernetesクラスタ(CRI-O + Flannel CNI)。Terraformでノード構築、AnsibleでK8sセットアップ自動化。Flux CDでGitOps運用、Longhorn分散ストレージ、HashiCorp Vaultでシークレット管理",
-    outcome: "本番環境レベルのk8s運用経験を獲得。完全なIaC化により環境の再現性を担保。GitOpsによる宣言的管理で運用を効率化。実践的なインフラスキルを証明"
+    outcome: "本番環境レベルのk8s運用経験を獲得。完全なIaC化により環境の再現性を担保。GitOpsによる宣言的管理で運用を効率化。"
   },
   {
     name: "EC2 → App Runner 移行プロジェクト",
@@ -48,7 +48,7 @@ export const projects: ProjectData[] = [
     challenge: "VSCode外でのClaude Codeセッション継続、モバイルデバイスからのリモートコーディング実現",
     role: "個人開発(企画・設計・実装すべて)",
     architecture: "VSCode拡張からHTTP API経由でPreToolUseフックをトリガー。Discord BotがStream-JSON形式でセッション管理。プロジェクト別スレッド管理機能を実装",
-    outcome: "複数プラットフォーム統合アーキテクチャ実現。リアルタイムセッション管理とDiscord UIによる承認フロー構築。MITライセンスでOSS公開"
+    outcome: "セッション管理とDiscord UIによる承認フロー構築。MITライセンスでOSS公開"
   },
   {
     name: "糸かけシミュレーター",
@@ -63,7 +63,7 @@ export const projects: ProjectData[] = [
     challenge: "複雑な幾何学パターンの描画パフォーマンス最適化、直感的なUI/UX設計",
     role: "個人開発(企画・設計・実装すべて)",
     architecture: "TypeScriptでCanvas APIを使用した描画エンジン実装。PWA対応でオフライン動作可能。Cloudflare Pagesでホスティング",
-    outcome: "U22プログラミングコンテスト2019 入賞・日本事務器賞受賞。商用レベルのUI/UX品質を達成"
+    outcome: "U22プログラミングコンテスト2019 入賞・日本事務器賞受賞。"
   },
   {
     name: "2434Units.com",
