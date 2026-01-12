@@ -1,0 +1,67 @@
+---
+const title = 'Backend Engineer / Infrastructure / Security';
+const description = 'インフラ・セキュリティ・API設計に強いエンジニア';
+const skills = [
+  'Backend: Python (FastAPI), TypeScript, Go, PHP',
+  'Infrastructure: AWS, Kubernetes, Terraform, Ansible',
+  'Security: 脆弱性診断、脅威分析、インシデント対応'
+];
+const experience = [
+  '7社での業務委託・インターン経験',
+  'AWS App Runner移行プロジェクトリード',
+  'AIエージェント開発 (医療×LLM)'
+];
+const certifications = [
+  '情報処理安全確保支援士 (92点 / 上位2%)',
+  'ネットワークスペシャリスト',
+  'k8s運用環境の構築・GitOps実践'
+];
+---
+
+<div id="hero" class="container justify-center w-full flex flex-col items-center my-8">
+  <div class="w-full text-center mb-6">
+    <h1 class="text-4xl font-bold text-gray-900 mb-2">{title}</h1>
+    <p class="text-lg text-gray-600">{description}</p>
+  </div>
+
+  <div class="w-full grid md:grid-cols-3 gap-6 mb-8">
+    <div class="text-left">
+      <h3 class="text-xl font-bold text-gray-900 mb-3 pb-2 border-b-2 border-gray-300">技術領域</h3>
+      <ul class="space-y-2">
+        {skills.map(skill => (
+          <li class="text-sm text-gray-700">• {skill}</li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="text-left">
+      <h3 class="text-xl font-bold text-gray-900 mb-3 pb-2 border-b-2 border-gray-300">実務経験</h3>
+      <ul class="space-y-2">
+        {experience.map(exp => (
+          <li class="text-sm text-gray-700">• {exp}</li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="text-left">
+      <h3 class="text-xl font-bold text-gray-900 mb-3 pb-2 border-b-2 border-gray-300">強みの証明</h3>
+      <ul class="space-y-2">
+        {certifications.map(cert => (
+          <li class="text-sm text-gray-700">• {cert}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <div class="flex gap-4 flex-wrap justify-center">
+    <a href="#works" class="px-6 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors text-sm font-semibold">
+      Works 詳細
+    </a>
+    <a href="https://github.com/seigo2016" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors text-sm font-semibold">
+      <i class="fab fa-github mr-1"></i>GitHub
+    </a>
+    <a href="#articles" class="px-6 py-2 border-2 border-gray-900 text-gray-900 rounded hover:bg-gray-100 transition-colors text-sm font-semibold">
+      技術記事
+    </a>
+  </div>
+</div>

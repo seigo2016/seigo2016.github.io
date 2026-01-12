@@ -2,31 +2,40 @@ import type { AchievementsData } from '../types';
 
 export const certs: AchievementsData[] = [
   {
-    title: '日本漢字能力検定2級'
+    title: '情報処理安全確保支援士試験',
+    category: 'relevant'
   },
   {
-    title: '実用英語技能検定準1級'
+    title: 'ネットワークスペシャリスト試験',
+    category: 'relevant'
   },
   {
-    title: '情報検定 情報活用試験1級'
+    title: '応用情報技術者試験',
+    category: 'relevant'
   },
   {
-    title: '情報検定情報システム試験 基本スキル・プログラミングスキル プログラマ認定'
+    title: '基本情報技術者試験',
+    category: 'relevant'
   },
   {
-    title: 'ITパスポート試験'
+    title: '実用英語技能検定準1級',
+    category: 'other'
   },
   {
-    title: '基本情報技術者試験'
+    title: 'ITパスポート試験',
+    category: 'other'
   },
   {
-    title: '応用情報技術者試験'
+    title: '情報検定 情報活用試験1級',
+    category: 'other'
   },
   {
-    title: '情報処理安全確保支援士試験'
+    title: '情報検定情報システム試験 基本スキル・プログラミングスキル プログラマ認定',
+    category: 'other'
   },
   {
-    title: 'ネットワークスペシャリスト試験'
+    title: '日本漢字能力検定2級',
+    category: 'other'
   }
 ];
 

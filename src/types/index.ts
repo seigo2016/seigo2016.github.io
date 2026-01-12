@@ -8,6 +8,12 @@ export interface ProjectData {
   }[];
   tags: string[];
   featured?: boolean;
+  category?: 'professional' | 'hobby';
+  challenge?: string;
+  role?: string;
+  architecture?: string;
+  outcome?: string;
+  detailUrl?: string;
 }
 
 export interface DateRange {
@@ -18,6 +24,10 @@ export interface DateRange {
 export interface WorksData {
   companyName: string;
   dateRanges: DateRange[];
+  role?: string;
+  responsibilities?: string[];
+  achievements?: string[];
+  technologies?: string[];
 }
 
 export interface SkillData {
@@ -37,6 +47,7 @@ export interface AchievementsData {
   year?: string;
   description?: string;
   url?: string;
+  category?: 'relevant' | 'other';
 }
 
 export interface OgpData {
