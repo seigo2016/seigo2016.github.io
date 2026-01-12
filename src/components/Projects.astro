@@ -1,24 +1,50 @@
 ---
+import { Image } from 'astro:assets';
 import { projects } from '../data/projects';
 
 const professionalProjects = projects.filter(project => project.category === 'professional');
 
-function getImageSrc(image: string): string {
-  if (image.startsWith('http://') || image.startsWith('https://')) {
-    return image;
+// 画像のインポート
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}');
+
+async function getImage(imageName: string) {
+  if (imageName.startsWith('http://') || imageName.startsWith('https://')) {
+    return null; // 外部URL
   }
-  return `images/contents_images/${image}`;
+  const imagePath = `/src/assets/images/${imageName}`;
+  const imageModule = images[imagePath];
+  if (!imageModule) return null;
+  return (await imageModule()).default;
 }
+
+// 各プロジェクトの画像を事前ロード
+const projectsWithImages = await Promise.all(
+  professionalProjects.map(async (project) => ({
+    ...project,
+    imageData: await getImage(project.image),
+  }))
+);
 ---
 
 <div id="projects" class="w-full flex lg:flex-row flex-col">
   <div class="w-full text-center">
     <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Projects</h2>
     <div class="grid lg:grid-cols-2 gap-6 grid-cols-1">
-      {professionalProjects.map(project => 
+      {projectsWithImages.map(project =>
         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-left">
           <div class="flex items-start gap-4">
-            <img src={getImageSrc(project.image)} alt={project.name} class="h-24 w-24 rounded-lg object-cover flex-shrink-0" />
+            {project.imageData ? (
+              <Image
+                src={project.imageData}
+                alt={project.name}
+                width={96}
+                height={96}
+                class="h-24 w-24 rounded-lg object-cover flex-shrink-0"
+                loading="lazy"
+              />
+            ) : (
+              <img src={project.image} alt={project.name} class="h-24 w-24 rounded-lg object-cover flex-shrink-0" />
+            )}
             <div class="flex-1">
               <h3 class="text-lg font-bold text-gray-900 mb-1">{project.name}</h3>
               <div class="text-xs flex flex-row flex-wrap gap-1 mb-2">

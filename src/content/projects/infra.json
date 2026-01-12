@@ -1,0 +1,18 @@
+{
+  "name": "自宅サーバー環境",
+  "description": "自宅サーバー。Proxmoxで仮想化後、k8sクラスタを構築。Terraform + AnsibleでIaC、GitOpsを実践。",
+  "image": "infra.webp",
+  "url": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/seigo2016/infra"
+    }
+  ],
+  "tags": ["Proxmox", "Kubernetes", "GitOps", "Terraform", "Ansible"],
+  "featured": true,
+  "category": "professional",
+  "challenge": "本番環境相当のインフラ技術習得、IaCによる再現可能な環境構築、GitOpsによる宣言的な運用の実現",
+  "role": "個人開発(インフラ設計・構築・運用すべて)",
+  "architecture": "Proxmox VE上にKubernetesクラスタ(CRI-O + Flannel CNI)。Terraformでノード構築、AnsibleでK8sセットアップ自動化。Flux CDでGitOps運用、Longhorn分散ストレージ、HashiCorp Vaultでシークレット管理",
+  "outcome": "本番環境レベルのk8s運用経験を獲得。完全なIaC化により環境の再現性を担保。GitOpsによる宣言的管理で運用を効率化。実践的なインフラスキルを証明"
+}

@@ -1,6 +1,5 @@
 ---
-const title = 'Backend Engineer / Infrastructure / Security';
-const description = 'インフラ・セキュリティ・API設計に強いエンジニア';
+const title = 'Backend / Infrastructure / Security';
 const skills = [
   'Backend: Python (FastAPI), TypeScript, Go, PHP',
   'Infrastructure: AWS, Kubernetes, Terraform, Ansible',
@@ -11,20 +10,21 @@ const experience = [
   'AWS App Runner移行プロジェクトリード',
   'AIエージェント開発 (医療×LLM)'
 ];
-const certifications = [
-  '情報処理安全確保支援士 (92点 / 上位2%)',
-  'ネットワークスペシャリスト',
-  'k8s運用環境の構築・GitOps実践'
-];
 ---
 
 <div id="hero" class="container justify-center w-full flex flex-col items-center my-8">
   <div class="w-full text-center mb-6">
-    <h1 class="text-4xl font-bold text-gray-900 mb-2">{title}</h1>
-    <p class="text-lg text-gray-600">{description}</p>
+    <div class="flex items-center justify-center gap-4 mb-6">
+      <img src="images/seigo2016-icon-small.svg" alt="seigo2016" class="h-24 w-24 rounded-full" />
+      <div class="text-left">
+        <div class="text-base text-gray-600">seigo2016</div>
+        <div class="text-2xl font-semibold text-gray-900">Seigo Kawachi</div>
+      </div>
+    </div>
+    <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-2">{title}</h1>
   </div>
 
-  <div class="w-full grid md:grid-cols-3 gap-6 mb-8">
+  <div class="w-full grid md:grid-cols-2 gap-6 mb-8">
     <div class="text-left">
       <h3 class="text-xl font-bold text-gray-900 mb-3 pb-2 border-b-2 border-gray-300">技術領域</h3>
       <ul class="space-y-2">
@@ -39,15 +39,6 @@ const certifications = [
       <ul class="space-y-2">
         {experience.map(exp => (
           <li class="text-sm text-gray-700">• {exp}</li>
-        ))}
-      </ul>
-    </div>
-
-    <div class="text-left">
-      <h3 class="text-xl font-bold text-gray-900 mb-3 pb-2 border-b-2 border-gray-300">強みの証明</h3>
-      <ul class="space-y-2">
-        {certifications.map(cert => (
-          <li class="text-sm text-gray-700">• {cert}</li>
         ))}
       </ul>
     </div>
