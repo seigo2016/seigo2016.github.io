@@ -26,9 +26,8 @@ export const works: WorksData[] = [
     ],
     role: "Security Research Intern",
     responsibilities: [
-      "脆弱性診断・セキュリティツール検証",
+      "脆弱性・セキュリティツール検証",
       "脅威インテリジェンス分析",
-      "インシデント対応・マルウェア解析"
     ],
     achievements: [
       "金融機関標的フィッシング攻撃の分析(94 URLsを分析、攻撃インフラをマッピング)",
