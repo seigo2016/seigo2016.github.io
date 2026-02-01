@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Skills from '../../components/Skills.astro';
+import Achievement from '../../components/Achievements.astro';
+import Works from '../../components/Works.astro';
+import Projects from '../../components/Projects.astro';
+import Articles from '../../components/Articles.astro';
+import Media from '../../components/Media.astro';
+import OtherProjects from '../../components/OtherProjects.astro';
+
+const lang = 'ja';
+---
+
+<Layout title="seigo2016 Portfolio" lang={lang}>
+	<main class="w-full mx-auto flex flex-col gap-4">
+		<div>
+			<Header lang={lang} />
+		</div>
+		<div>
+			<Hero lang={lang} />
+		</div>
+		<div>
+			<Works lang={lang} />
+		</div>
+		<div>
+			<Projects lang={lang} />
+		</div>
+		<div>
+			<Skills lang={lang} />
+		</div>
+		<div>
+			<Achievement lang={lang} />
+		</div>
+		<div>
+			<Articles lang={lang} />
+		</div>
+		<div>
+			<Media lang={lang} />
+		</div>
+		<div>
+			<OtherProjects lang={lang} />
+		</div>
+	</main>
+</Layout>

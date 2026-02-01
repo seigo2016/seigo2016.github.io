@@ -1,44 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import Skills from '../components/Skills.astro';
-import Achievement from '../components/Achievements.astro';
-import Works from '../components/Works.astro';
-import Projects from '../components/Projects.astro';
-import Articles from '../components/Articles.astro';
-import Media from '../components/Media.astro';
-import OtherProjects from '../components/OtherProjects.astro';
----
+// Redirect based on browser language preference
+const acceptLanguage = Astro.request.headers.get('accept-language') || '';
+const preferredLang = acceptLanguage.toLowerCase().includes('ja') ? 'ja' : 'en';
 
-<Layout title="seigo2016 Portfolio">
-	<main class="w-full mx-auto flex flex-col gap-4">
-		<div>
-			<Header />
-		</div>
-		<div>
-			<Hero />
-		</div>
-		<div>
-			<Works />
-		</div>
-		<div>
-			<Projects />
-		</div>
-		<div>
-			<Skills />
-		</div>
-		<div>
-			<Achievement />
-		</div>
-		<div>
-			<Articles />
-		</div>
-		<div>
-			<Media />
-		</div>
-		<div>
-			<OtherProjects />
-		</div>
-	</main>
-</Layout>
+return Astro.redirect(`/${preferredLang}/`);
+---

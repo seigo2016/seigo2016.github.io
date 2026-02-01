@@ -10,4 +10,11 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: 'https://seigo2016.com',
+  i18n: {
+    defaultLocale: 'ja',
+    locales: ['ja', 'en'],
+    routing: {
+      prefixDefaultLocale: true,
+    },
+  },
 });
