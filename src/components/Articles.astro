@@ -1,7 +1,17 @@
 ---
 import fetch from 'node-fetch';
 import type { OgpData } from '../types';
-import { articles } from '../data/articles';
+import type { Lang } from '../i18n/config';
+import { useTranslations } from '../i18n/utils';
+import { getArticlesData } from '../data';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const articles = getArticlesData(lang);
 
 async function getOgp() {
   const ogps: OgpData[] = [];
@@ -37,10 +47,10 @@ const ogps = await getOgp();
 
 <div id="articles" class="w-full px-4 md:px-8 lg:px-16 flex flex-col items-center">
   <div class="w-full text-center">
-    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Articles</h2>
+    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">{t('articles.title')}</h2>
     <div>
       <div class="grid lg:grid-cols-3 gap-4 md:grid-cols-2 grid-cols-1">
-        { ogps.map((ogp) => 
+        { ogps.map((ogp) =>
           <div class="bg-white p-4 rounded-lg shadow-md">
           <a href={ogp['og:url']} class="hover:shadow-lg" target="_blank" rel="noopener noreferrer">
             <div class="text-center justify-center flex flex-col">

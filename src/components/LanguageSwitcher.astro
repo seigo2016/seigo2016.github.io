@@ -1,0 +1,26 @@
+---
+import type { Lang } from '../i18n/config';
+import { languages } from '../i18n/config';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<div class="flex items-center gap-2">
+  {Object.entries(languages).map(([code, name]) => (
+    <a
+      href={`/${code}/`}
+      class:list={[
+        "px-2 py-1 text-sm rounded transition-colors",
+        lang === code
+          ? "bg-gray-900 text-white"
+          : "text-gray-600 hover:bg-gray-100"
+      ]}
+    >
+      {name}
+    </a>
+  ))}
+</div>

@@ -1,28 +1,42 @@
+---
+import type { Lang } from '../i18n/config';
+import { useTranslations } from '../i18n/utils';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const basePath = `/${lang}`;
+---
+
 <header class="bg-white">
   <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
-      <a href="#" class="-m-1.5 p-1.5">
+      <a href={basePath} class="-m-1.5 p-1.5">
         <div class="flex items-center gap-2">
-          <img src="images/seigo2016-icon-small.svg" class="h-8"/>
+          <img src="/images/seigo2016-icon-small.svg" class="h-8"/>
           <p>seigo2016</p>
         </div>
       </a>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-      <a href="#works" class="text-sm font-semibold leading-6 text-gray-900">Works</a>
-      <a href="#projects" class="text-sm font-semibold leading-6 text-gray-900">Projects</a>
-      <a href="#achievements" class="text-sm font-semibold leading-6 text-gray-900">Achievements</a>
-      <a href="#articles" class="text-sm font-semibold leading-6 text-gray-900">Articles</a>
+      <a href={basePath} class="text-sm font-semibold leading-6 text-gray-900">{t('nav.home')}</a>
+      <a href={`${basePath}#works`} class="text-sm font-semibold leading-6 text-gray-900">{t('nav.works')}</a>
+      <a href={`${basePath}#projects`} class="text-sm font-semibold leading-6 text-gray-900">{t('nav.projects')}</a>
+      <a href={`${basePath}#achievements`} class="text-sm font-semibold leading-6 text-gray-900">{t('nav.achievements')}</a>
+      <a href={`${basePath}#articles`} class="text-sm font-semibold leading-6 text-gray-900">{t('nav.articles')}</a>
+      <LanguageSwitcher lang={lang} />
     </div>
-    
   </nav>
   <div class="lg:hidden" role="dialog" aria-modal="true">
     <div class="fixed top-0 right-0 w-full overflow-y-auto bg-white px-6 py-6 lg:max-w-sm lg:ring-1 lg:ring-gray-900/10">
       <div class="flex items-center justify-between">
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href={basePath} class="-m-1.5 p-1.5">
           <div class="flex items-center">
-            <img src="images/seigo2016-icon-small.svg" class="h-8"/>
+            <img src="/images/seigo2016-icon-small.svg" class="h-8"/>
             <p class="font-bold leading-6 ml-4 text-md">seigo2016.com</p>
           </div>
         </a>
@@ -38,11 +52,14 @@
       <div id="menu" class="mt-6 hidden">
         <div class="-my-6 divide-y divide-gray-500/10">
           <div class="space-y-2 py-6">
-            <a href="/#home" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
-            <a href="/#works" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Works</a>
-            <a href="/#projects" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Projects</a>
-            <a href="/#achievements" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Achievements</a>
-            <a href="/#articles" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Articles</a>
+            <a href={`${basePath}#home`} class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{t('nav.home')}</a>
+            <a href={`${basePath}#works`} class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{t('nav.works')}</a>
+            <a href={`${basePath}#projects`} class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{t('nav.projects')}</a>
+            <a href={`${basePath}#achievements`} class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{t('nav.achievements')}</a>
+            <a href={`${basePath}#articles`} class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{t('nav.articles')}</a>
+            <div class="px-3 py-2">
+              <LanguageSwitcher lang={lang} />
+            </div>
           </div>
         </div>
       </div>

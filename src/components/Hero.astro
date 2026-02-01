@@ -1,32 +1,42 @@
 ---
-const title = 'Backend / Infrastructure / Security';
+import type { Lang } from '../i18n/config';
+import { useTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const basePath = `/${lang}`;
+
 const skills = [
-  'Backend: Python (FastAPI), TypeScript, Go, PHP',
-  'Infrastructure: AWS, Kubernetes, Terraform, Ansible',
-  'Security: 脆弱性診断、脅威分析、インシデント対応'
+  t('hero.skills.backend'),
+  t('hero.skills.infra'),
+  t('hero.skills.security')
 ];
 const experience = [
-  '7社での業務委託・インターン経験',
-  'AWS App Runner移行プロジェクトリード',
-  'AIエージェント開発 (医療×LLM)'
+  t('hero.exp.companies'),
+  t('hero.exp.apprunner'),
+  t('hero.exp.ai')
 ];
 ---
 
 <div id="hero" class="w-full px-4 md:px-8 lg:px-16 flex flex-col items-center my-8">
   <div class="w-full text-center mb-6">
     <div class="flex items-center justify-center gap-6 mb-6">
-      <img src="images/seigo2016-icon-small.svg" alt="seigo2016" class="h-32 w-32 md:h-40 md:w-40 rounded-full" />
+      <img src="/images/seigo2016-icon-small.svg" alt="seigo2016" class="h-32 w-32 md:h-40 md:w-40 rounded-full" />
       <div class="text-left">
         <div class="text-lg md:text-xl text-gray-600">seigo2016</div>
         <div class="text-3xl md:text-4xl font-semibold text-gray-900">Seigo Kawachi</div>
       </div>
     </div>
-    <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-2">{title}</h1>
+    <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-2">{t('hero.title')}</h1>
   </div>
 
   <div class="w-full grid md:grid-cols-2 gap-6 mb-8 max-w-4xl">
     <div class="text-center">
-      <h3 class="text-xl font-bold text-gray-900 mb-3 pb-2 border-b-2 border-gray-300">技術領域</h3>
+      <h3 class="text-xl font-bold text-gray-900 mb-3 pb-2 border-b-2 border-gray-300">{t('hero.skills.title')}</h3>
       <ul class="space-y-2">
         {skills.map(skill => (
           <li class="text-sm text-gray-700">{skill}</li>
@@ -35,7 +45,7 @@ const experience = [
     </div>
 
     <div class="text-center">
-      <h3 class="text-xl font-bold text-gray-900 mb-3 pb-2 border-b-2 border-gray-300">実務経験</h3>
+      <h3 class="text-xl font-bold text-gray-900 mb-3 pb-2 border-b-2 border-gray-300">{t('hero.experience.title')}</h3>
       <ul class="space-y-2">
         {experience.map(exp => (
           <li class="text-sm text-gray-700">{exp}</li>
@@ -45,14 +55,14 @@ const experience = [
   </div>
 
   <div class="flex gap-4 flex-wrap justify-center">
-    <a href="#works" class="px-6 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors text-sm font-semibold">
-      Works 詳細
+    <a href={`${basePath}#works`} class="px-6 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors text-sm font-semibold">
+      {t('hero.cta.works')}
     </a>
     <a href="https://github.com/seigo2016" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors text-sm font-semibold">
       <i class="fab fa-github mr-1"></i>GitHub
     </a>
-    <a href="#articles" class="px-6 py-2 border-2 border-gray-900 text-gray-900 rounded hover:bg-gray-100 transition-colors text-sm font-semibold">
-      技術記事
+    <a href={`${basePath}#articles`} class="px-6 py-2 border-2 border-gray-900 text-gray-900 rounded hover:bg-gray-100 transition-colors text-sm font-semibold">
+      {t('hero.cta.articles')}
     </a>
   </div>
 </div>

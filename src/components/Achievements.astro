@@ -1,5 +1,15 @@
 ---
-import { certs, awards } from '../data/achievements';
+import type { Lang } from '../i18n/config';
+import { useTranslations } from '../i18n/utils';
+import { getAchievementsData } from '../data';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const { certs, awards } = getAchievementsData(lang);
 
 const relevantCerts = certs.filter(cert => cert.category === 'relevant');
 const otherCerts = certs.filter(cert => cert.category === 'other');
@@ -7,7 +17,7 @@ const otherCerts = certs.filter(cert => cert.category === 'other');
 
 <div id="achievements" class="w-full flex lg:flex-row flex-col px-4 md:px-8 lg:px-16">
   <div class="basis-1/2 text-center">
-    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Awards</h2>
+    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">{t('achievements.awards.title')}</h2>
     <ul class="flex flex-col justify-center items-center">
       {awards.map(award => (
         <li class="w-full md:w-3/4 my-1">
@@ -35,7 +45,7 @@ const otherCerts = certs.filter(cert => cert.category === 'other');
     </ul>
   </div>
   <div class="basis-1/2 text-center">
-    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">Certifications</h2>
+    <h2 class="text-3xl my-4 font-bold text-gray-900 leading-tight mb-2 border-t-4 border-b-4 border-gray-600 py-4">{t('achievements.certs.title')}</h2>
     <ul class="flex flex-col justify-center items-center">
       {relevantCerts.map(cert => (
         <li class="w-full md:w-3/4 my-1">
@@ -46,10 +56,10 @@ const otherCerts = certs.filter(cert => cert.category === 'other');
         </li>
       ))}
     </ul>
-    
+
     <details class="w-full md:w-3/4 my-4 mx-auto">
       <summary class="cursor-pointer text-base font-semibold text-gray-700 hover:text-gray-900 py-2 px-4 bg-gray-100 hover:bg-gray-200 rounded border touch-manipulation min-h-[44px] flex items-center">
-        その他の資格
+        {t('achievements.certs.other')}
       </summary>
       <ul class="mt-2 mx-4">
         {otherCerts.map(cert => (
