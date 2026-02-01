@@ -1,4 +1,4 @@
-import type { WorksData } from '../types';
+import type { WorksData } from '../../types';
 
 export const works: WorksData[] = [
   {
@@ -87,7 +87,7 @@ export const works: WorksData[] = [
   },
   {
     companyName: "株式会社NewBizz",
-    dateRanges: [ 
+    dateRanges: [
       { since: new Date("2023-02-01") },
     ],
   },

@@ -1,6 +1,6 @@
-import type { ProjectData } from '../types';
+import type { ProjectData } from '../../types';
 
-export const projects: ProjectData[] = [  
+export const projects: ProjectData[] = [
   {
     name: "自宅サーバー環境",
     description: "自宅サーバー。Proxmoxで仮想化後、k8sクラスタを構築。Terraform + AnsibleでIaC、GitOpsを実践。",
@@ -135,8 +135,8 @@ export const projects: ProjectData[] = [
     image: "smartlock.webp",
     url: [
       {
-      name: "動画",
-      url: "https://youtu.be/BHFAZTuZBGE"
+        name: "動画",
+        url: "https://youtu.be/BHFAZTuZBGE"
       }
     ],
     tags: ["Python", "Raspberry Pi"],

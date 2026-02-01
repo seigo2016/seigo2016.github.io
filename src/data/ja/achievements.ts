@@ -1,4 +1,4 @@
-import type { AchievementsData } from '../types';
+import type { AchievementsData } from '../../types';
 
 export const certs: AchievementsData[] = [
   {

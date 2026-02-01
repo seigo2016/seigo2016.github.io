@@ -1,4 +1,4 @@
-import type { MediaItem } from '../types';
+import type { MediaItem } from '../../types';
 
 export const mediaItems: MediaItem[] = [
   {

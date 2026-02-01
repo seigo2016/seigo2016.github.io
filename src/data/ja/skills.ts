@@ -1,4 +1,4 @@
-import type { SkillData, SkillAbstract } from '../types';
+import type { SkillData, SkillAbstract } from '../../types';
 
 export const skills: SkillData[] = [
   {
@@ -9,28 +9,28 @@ export const skills: SkillData[] = [
     icon: 'python.svg'
   },
   {
-    name:'Go',
-    description:'個人制作のデジタルサイネージv2やWebアプリのバックエンドや、株式会社NewBizzでのバックエンド開発でも利用',
-    year:'',
-    icon:'Go-Logo_Blue.svg'
+    name: 'Go',
+    description: '個人制作のデジタルサイネージv2やWebアプリのバックエンドや、株式会社NewBizzでのバックエンド開発でも利用',
+    year: '',
+    icon: 'Go-Logo_Blue.svg'
   },
   {
-    name:'TypeScript',
-    description:'糸かけシミュレーターや2434units.comなどのWebアプリのフロントの開発に使用. NestJSやPrismaなどを用いたバックエンドの開発にも利用.',
-    year:' ',
-    icon:'ts-logo-256.svg'
+    name: 'TypeScript',
+    description: '糸かけシミュレーターや2434units.comなどのWebアプリのフロントの開発に使用. NestJSやPrismaなどを用いたバックエンドの開発にも利用.',
+    year: ' ',
+    icon: 'ts-logo-256.svg'
   },
   {
-    name:'PHP',
-    description:'バックエンドの開発に利用. ',
-    year:'',
-    icon:'php-logo.png'
+    name: 'PHP',
+    description: 'バックエンドの開発に利用. ',
+    year: '',
+    icon: 'php-logo.png'
   },
   {
-    name:'docker',
-    description:'開発環境の構築やデプロイに利用',
-    year:'',
-    icon:'docker.webp'
+    name: 'docker',
+    description: '開発環境の構築やデプロイに利用',
+    year: '',
+    icon: 'docker.webp'
   },
   {
     name: 'AWS',
@@ -40,7 +40,7 @@ export const skills: SkillData[] = [
   },
 ];
 
-export const skillAbstract : SkillAbstract[] = [  
+export const skillAbstract: SkillAbstract[] = [
   {
     name: 'Proxmox',
     icon: 'proxmox.webp'
