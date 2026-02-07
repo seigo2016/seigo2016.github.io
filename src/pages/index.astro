@@ -1,7 +1,16 @@
 ---
-// Redirect based on browser language preference
-const acceptLanguage = Astro.request.headers.get('accept-language') || '';
-const preferredLang = acceptLanguage.toLowerCase().includes('ja') ? 'ja' : 'en';
-
-return Astro.redirect(`/${preferredLang}/`);
+// This page instantly redirects based on browser language.
+// Using client-side JS for fastest redirect on static hosting.
 ---
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script is:inline>
+      const lang = navigator.language || navigator.userLanguage || '';
+      const path = lang.toLowerCase().startsWith('ja') ? '/ja/' : '/en/';
+      location.replace(path);
+    </script>
+  </head>
+  <body></body>
+</html>
