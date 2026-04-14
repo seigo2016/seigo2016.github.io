@@ -10,14 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
+    "@astrojs/check": "^0.9.8",
     "@astrojs/react": "^4.4.2",
     "@fontsource-variable/noto-sans-jp": "^5.2.9",
     "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-navigation-menu": "^1.2.14",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
-    "astro": "^5.16.8",
+    "astro": "^5.18.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "jsdom": "^27.4.0",
@@ -30,8 +30,14 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindcss/vite": "^4.2.2",
     "@types/jsdom": "^27.0.0",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.2.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   }
 }
