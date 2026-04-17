@@ -2,7 +2,7 @@ import type { AchievementsData } from '../../types';
 
 export const certs: AchievementsData[] = [
   {
-    title: 'Registered Information Security Specialist Examination (RISS)',
+    title: 'Registered Information Security Specialist Examination (RISS) (Not Registered)',
     category: 'relevant'
   },
   {

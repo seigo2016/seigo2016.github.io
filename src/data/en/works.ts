@@ -13,7 +13,7 @@ export const works: WorksData[] = [
     ],
     achievements: [
       "Built medical record transcription PoC and evaluation framework",
-      "Developed and deployed AI agent PoC for medical administration",
+      "Developed and deployed agent PoC for medical administration",
       "Technical evaluation and selection of LLM frameworks (Mastra/LangGraph)"
     ],
     technologies: ["TypeScript", "AWS", "Lambda", "DynamoDB", "LLM", "Mastra", "LangGraph"]
@@ -57,7 +57,7 @@ export const works: WorksData[] = [
   {
     companyName: "CoPalette Inc.",
     dateRanges: [
-      { since: new Date("2024-10-15") },
+      { since: new Date("2024-10-15"), until: new Date("2026-01-31") }
     ],
     role: "Backend Engineer / Infrastructure Engineer",
     responsibilities: [

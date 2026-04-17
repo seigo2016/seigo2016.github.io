@@ -13,7 +13,7 @@ export const works: WorksData[] = [
     ],
     achievements: [
       "カルテ書き起こしのPoC・評価基盤の作成",
-      "医療機関の医療事務領域における新規AIエージェントPoC及び現場導入",
+      "医療機関の医療事務領域における新規エージェントPoC及び現場導入",
       "LLMフレームワーク(Mastra/LangGraph)の比較評価・技術選定"
     ],
     technologies: ["TypeScript", "AWS", "Lambda", "DynamoDB", "LLM", "Mastra", "LangGraph"]
@@ -57,7 +57,7 @@ export const works: WorksData[] = [
   {
     companyName: "株式会社CoPalette",
     dateRanges: [
-      { since: new Date("2024-10-15") },
+      { since: new Date("2024-10-15"), until: new Date("2026-01-31") }
     ],
     role: "Backend Engineer / Infrastructure Engineer",
     responsibilities: [

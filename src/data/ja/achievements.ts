@@ -2,7 +2,7 @@ import type { AchievementsData } from '../../types';
 
 export const certs: AchievementsData[] = [
   {
-    title: '情報処理安全確保支援士試験',
+    title: '情報処理安全確保支援士試験(未登録)',
     category: 'relevant'
   },
   {
