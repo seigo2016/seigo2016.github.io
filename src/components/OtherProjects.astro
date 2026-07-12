@@ -43,9 +43,9 @@ const hobbyProjectsWithImages = await Promise.all(
             <Image
               src={project.imageData}
               alt={project.name}
-              width={128}
-              height={128}
-              class="h-32 rounded-lg my-2 block m-auto"
+              height={256}
+              width={Math.round(256 * project.imageData.width / project.imageData.height)}
+              class="h-32 w-auto rounded-lg my-2 block m-auto"
               loading="lazy"
             />
           ) : (
